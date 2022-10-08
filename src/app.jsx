@@ -10,6 +10,7 @@ import ErrorPage from './pages/error-page';
 import HomePage from './pages/home-page';
 import GamesCat from './pages/games-cat';
 import TvSeriesCat from './pages/tvseries-page';
+import ArticlePage from './pages/article-page';
 
 const App = () => (
   <BrowserRouter>
