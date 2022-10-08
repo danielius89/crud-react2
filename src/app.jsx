@@ -19,6 +19,7 @@ const App = () => (
       <Route path="/movies" element={<MoviesCat />} />
       <Route path="/games" element={<GamesCat />} />
       <Route path="/tv-series" element={<TvSeriesCat />} />
+      <Route path="article/:articleId" element={<ArticlePage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
