@@ -1,4 +1,4 @@
-const serverAddress = 'http://localhost:8001';
+const serverAddress = 'http://localhost:8000';
 
 const formatNews = ({
   id,

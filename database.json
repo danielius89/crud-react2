@@ -1,7 +1,7 @@
 {
   "news": [
     {
-      "title": "Naujienos pavadinimas",
+      "title": "Naujienos pavadinimass",
       "categoryId": 3,
       "img": "https://geekified.net/wp-content/uploads/2020/01/Oscars.png",
       "description": "Aprašymas",
@@ -35,6 +35,15 @@
       "author": "Danielius",
       "date": "2022-10-08",
       "id": 5
+    },
+    {
+      "title": "sgvdgr",
+      "categoryId": 2,
+      "img": "gsdrg",
+      "description": "drgdr",
+      "author": "grdg",
+      "date": "gr",
+      "id": 6
     }
   ],
   "categories": [

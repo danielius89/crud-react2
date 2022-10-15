@@ -11,6 +11,7 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, Modal, Grid } from '@mui/material/';
 import Header from '../components/header';
 import NewsForm from '../components/news-form';
+import NewsCard from '../components/news-card';
 import NewsService from '../services/news-service';
 
 const NewsPicture = {
@@ -81,6 +82,28 @@ const HomePage = () => {
               <Grid item padding={2} xs={12} md={8} sx={{ bgcolor: '#eee' }}>
 
                 <Item>Turinys</Item>
+                <Grid container spacing={2} paddingTop={2}>
+                  { news.map(({
+                    id,
+                    title,
+                    description,
+                    category,
+                    img,
+                    author,
+                    date,
+                  }) => (
+                    <NewsCard
+                      title={title}
+                      description={description}
+                      category={category}
+                      img={img}
+                      author={author}
+                      date={date}
+                      onDelete={() => removeNews(id)}
+                      onEdit={() => editNews(id)}
+                    />
+                  ))}
+                </Grid>
                 <Grid container spacing={2} paddingTop={2}>
 
                   <Grid item xs={12} md={6} lg={6}>
