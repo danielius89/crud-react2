@@ -11,6 +11,7 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, Modal, Grid } from '@mui/material/';
 import Header from '../components/header';
 import NewsForm from '../components/news-form';
+import NewsService from '../services/news-service';
 
 const NewsPicture = {
   maxWidth: 'calc(100% + 16px)',
