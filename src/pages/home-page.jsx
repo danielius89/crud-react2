@@ -66,7 +66,6 @@ const HomePage = () => (
                     <Box component="div" sx={{ display: 'inline' }}>komentarai</Box>
                   </Item>
                 </Grid>
-
               </Grid>
 
             </Grid>
