@@ -92,16 +92,22 @@ const HomePage = () => {
                     author,
                     date,
                   }) => (
-                    <NewsCard
-                      title={title}
-                      description={description}
-                      category={category}
-                      img={img}
-                      author={author}
-                      date={date}
-                      onDelete={() => removeNews(id)}
-                      onEdit={() => editNews(id)}
-                    />
+                    // eslint-disable-next-line react/jsx-no-useless-fragment
+                    <>
+                      {category !== 'PAKEISTI' ? (
+                        <NewsCard
+                          title={title}
+                          description={description}
+                          category={category}
+                          img={img}
+                          author={author}
+                          date={date}
+                          onDelete={() => removeNews(id)}
+                          onEdit={() => editNews(id)}
+                        />
+                      )
+                        : ('')}
+                    </>
                   ))}
                 </Grid>
                 <Grid container spacing={2} paddingTop={2}>
@@ -139,7 +145,7 @@ const HomePage = () => {
 
               </Grid>
               <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
-                <Item>šoninė juosta</Item>
+                <Item sx={{ margin: '0 0 1rem 0' }}>šoninė juosta</Item>
                 <Header openModal={() => setModalOpen(true)} />
                 <Modal open={modalOpen} onClose={closeModal}>
                   <Box sx={{

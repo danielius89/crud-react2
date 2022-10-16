@@ -33,7 +33,7 @@ theme.typography.h1 = {
   },
 };
 
-const HomePage = () => (
+const MoviesCat = () => (
   <div style={hero}>
     <ThemeProvider theme={theme}>
       <Typography variant="h1" align="center" pt="1vh" component="div" gutterBottom>
@@ -259,4 +259,4 @@ const HomePage = () => (
   </div>
 );
 
-export default HomePage;
+export default MoviesCat;
