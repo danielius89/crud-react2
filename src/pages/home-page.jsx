@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 // import MovieIcon from '@mui/icons-material/Movie';
 // import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, Modal, Grid } from '@mui/material/';
+import { useSearchParams } from 'react-router-dom';
+import wait from '../helpers/wait';
 import Header from '../components/header';
 import NewsForm from '../components/news-form';
 import NewsCard from '../components/news-card';
@@ -24,6 +26,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HomePage = () => {
+  const [loading, setLoading] = React.useState(false);
+  const [searchParams] = useSearchParams();
+
   const [news, setNews] = React.useState([]);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [newsBeingEdited, setNewsBeingEdited] = React.useState(null);
@@ -35,10 +40,15 @@ const HomePage = () => {
   };
 
   // Data manipulation functions
-  const fetchAllNews = async () => {
-    const fetchedNews = await NewsService.fetchAll();
+  const fetchAllNews = React.useCallback(async () => {
+    setLoading(true);
+    const [fetchedNews] = await Promise.all([
+      NewsService.fetchAll(searchParams.toString()),
+      wait(1000),
+    ]);
+    setLoading(false);
     setNews(fetchedNews);
-  };
+  }, [searchParams]);
 
   const createNews = async (newsProps) => {
     await NewsService.create(newsProps);
@@ -65,7 +75,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     fetchAllNews();
-  }, []);
+  }, [fetchAllNews]);
 
   return (
     <>
