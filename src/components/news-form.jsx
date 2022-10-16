@@ -11,13 +11,13 @@ import NewsService from '../services/news-service';
 
 const NewsForm = ({
   onSubmit,
-  formTitle,
+  formLabel,
   submitText,
   color,
   initValues,
 }) => {
   const [categories, setCategories] = React.useState([]);
-  const [title, setTitle] = React.useState(initValues?.title ?? '');
+  const [label, setLabel] = React.useState(initValues?.label ?? '');
   const [category, setCategory] = React.useState(initValues?.categoryId ?? '');
   const [img, setImg] = React.useState(initValues?.img ?? '');
   const [description, setDescription] = React.useState(initValues?.description ?? '');
@@ -28,7 +28,7 @@ const NewsForm = ({
     event.preventDefault();
 
     onSubmit({
-      title,
+      label,
       categoryId: category,
       img,
       description,
@@ -46,14 +46,14 @@ const NewsForm = ({
 
   return (
     <Paper component="form" sx={{ p: 3 }} onSubmit={handleSubmit}>
-      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>{formTitle}</Typography>
+      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>{formLabel}</Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <TextField
-          label="News title"
+          label="News label"
           fullWidth
           variant="filled"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          value={label}
+          onChange={(event) => setLabel(event.target.value)}
         />
         <TextField
           label="Category"
@@ -63,8 +63,8 @@ const NewsForm = ({
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         >
-          {categories.map(({ id, title: categoryTitle }) => (
-            <MenuItem key={id} value={id}>{categoryTitle}</MenuItem>
+          {categories.map(({ id, label: categoryLabel }) => (
+            <MenuItem key={id} value={id}>{categoryLabel}</MenuItem>
           ))}
         </TextField>
         <TextField
