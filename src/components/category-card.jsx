@@ -34,9 +34,7 @@ const CategoryCard = ({
   return (
 
     <Grid item xs={12} md={6} lg={4}>
-
       <Item sx={{ textAlign: 'left' }}>
-
         <img
           src={img}
           alt="no alt"
