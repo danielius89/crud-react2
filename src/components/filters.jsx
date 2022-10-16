@@ -25,6 +25,7 @@ const Filters = () => {
 
   const deleteFilters = () => {
     searchParams.delete('categoryId');
+
     setSearchParams(searchParams);
   };
 
@@ -32,6 +33,7 @@ const Filters = () => {
     (async () => {
       const [fetchedCategories] = await Promise.all([
         CategoryService.fetchAll(),
+
       ]);
 
       const categoryId = searchParams.get('categoryId');
@@ -48,25 +50,29 @@ const Filters = () => {
   }, []);
 
   return (
-    <>
-      <Divider sx={{ my: 2 }} />
+    <div>
+      {initialSetupDone && (
+        <>
 
-      <AutoSelectField
-        options={categories}
-        value={category}
-        onChange={handleCategoryChange}
-      />
-      <Divider sx={{ my: 2 }} />
-      <Button
-        variant="contained"
-        color="error"
-        fullWidth
-        onClick={deleteFilters}
-      >
-        Pašalinti filtrus
-      </Button>
-    </>
+          <AutoSelectField
+            options={categories}
+            value={category}
+            onChange={handleCategoryChange}
+          />
+          <Divider sx={{ my: 2 }} />
 
+          <Button
+            variant="contained"
+            color="error"
+            fullWidth
+            onClick={deleteFilters}
+          >
+            Pašalinti filtrus
+          </Button>
+        </>
+      )}
+
+    </div>
   );
 };
 
