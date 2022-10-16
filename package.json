@@ -20,7 +20,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "server": "json-server -w ./database.json -p 8000",
+    "server": "json-server -w ./database.json -p 8004",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
