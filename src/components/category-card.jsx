@@ -14,6 +14,7 @@ const CategoryCard = ({
   title,
   description,
   category,
+  categoryId,
   img,
   author,
   date,
@@ -45,17 +46,17 @@ const CategoryCard = ({
         </Typography>
 
         <Stack direction="row" spacing={1} paddingBottom={2}>
-          {category === 'Games' ? (
+          {categoryId === '3' ? (
             <Chip icon={<VideogameAssetIcon />} label="Games" />
           )
             : ('')}
 
-          {category === 'Movies' ? (
+          {categoryId === '2' ? (
             <Chip icon={<MovieIcon />} label="Movies" />
           )
             : ('')}
 
-          {category === 'TV series' ? (
+          {categoryId === '1' ? (
             <Chip icon={<LiveTvIcon />} label="TV series" />
           )
             : ('')}

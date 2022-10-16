@@ -61,18 +61,20 @@ const GamesCat = () => {
               title,
               description,
               category,
+              categoryId,
               img,
               author,
               date,
             }) => (
             // eslint-disable-next-line react/jsx-no-useless-fragment
               <>
-                {category === 'Games' ? (
+                {categoryId === '3' ? (
                   <NewsCard
                     id={id}
                     title={title}
                     description={description}
                     category={category}
+                    categoryId={categoryId}
                     img={img}
                     author={author}
                     date={date}
