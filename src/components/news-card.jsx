@@ -12,9 +12,11 @@ import LiveTvIcon from '@mui/icons-material/LiveTv';
 import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 
 const NewsCard = ({
+  id,
   title,
   description,
   category,
@@ -25,6 +27,7 @@ const NewsCard = ({
   onDelete,
   onEdit,
 }) => {
+  const navigate = useNavigate();
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -118,6 +121,16 @@ const NewsCard = ({
           </Grid>
           <Grid item xs={4} md={4} lg={4} />
         </Box>
+
+        <Button
+          size="small"
+          variant="contained"
+          fullWidth
+          sx={{ mt: 1 }}
+          onClick={() => navigate(`/article/${id}`)}
+        >
+          Peržiūrėti
+        </Button>
       </Item>
     </Grid>
   );
