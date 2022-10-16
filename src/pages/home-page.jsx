@@ -4,21 +4,16 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import MovieIcon from '@mui/icons-material/Movie';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+// import Chip from '@mui/material/Chip';
+// import Stack from '@mui/material/Stack';
+// import MovieIcon from '@mui/icons-material/Movie';
+// import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, Modal, Grid } from '@mui/material/';
 import Header from '../components/header';
 import NewsForm from '../components/news-form';
 import NewsCard from '../components/news-card';
 import NewsService from '../services/news-service';
-
-const NewsPicture = {
-  maxWidth: 'calc(100% + 16px)',
-  margin: '-8px 0 0 -8px',
-
-};
+import Filters from '../components/filters';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -87,62 +82,26 @@ const HomePage = () => {
                     id,
                     title,
                     description,
-                    category,
+                    categoryId,
                     img,
                     author,
                     date,
                   }) => (
-                    // eslint-disable-next-line react/jsx-no-useless-fragment
-                    <>
-                      {category !== 'PAKEISTI' ? (
-                        <NewsCard
-                          title={title}
-                          description={description}
-                          category={category}
-                          img={img}
-                          author={author}
-                          date={date}
-                          onDelete={() => removeNews(id)}
-                          onEdit={() => editNews(id)}
-                        />
-                      )
-                        : ('')}
-                    </>
+
+                    <NewsCard
+                      key={id}
+                      id={id}
+                      title={title}
+                      description={description}
+                      categoryId={categoryId}
+                      img={img}
+                      author={author}
+                      date={date}
+                      onDelete={() => removeNews(id)}
+                      onEdit={() => editNews(id)}
+                    />
                   ))}
                 </Grid>
-                <Grid container spacing={2} paddingTop={2}>
-
-                  <Grid item xs={12} md={6} lg={6}>
-                    <Item sx={{ textAlign: 'left' }}>
-                      <img
-                        src="https://geekified.net/wp-content/uploads/2019/07/stranger-things-eleven-papa-800x450.jpg"
-                        alt="no alt"
-                        style={NewsPicture}
-                      />
-                      <Typography variant="h4" component="h2" align="left" color="secondary" fontWeight="700" gutterBottom>
-                        Naujienos pavadinimas
-                      </Typography>
-                      <Stack direction="row" spacing={1} paddingBottom={2}>
-                        <Chip icon={<MovieIcon />} label="Filmai" />
-                        <Chip icon={<NewspaperIcon />} label="Naujienos" />
-
-                      </Stack>
-                      <Typography align="left">
-                        Mere hours before “Strangers Things” season 3 gets released,
-                        Chris and Dan sat down to talk about the first two seasons of the series.
-                        Chris: One of the first things that comes to mind, when
-                        talking about “Stranger Things”
-                        is the 80s nostalgia and how it was used to create the whole storyline.
-
-                      </Typography>
-
-                      <Box component="div" sx={{ display: 'inline' }}>autorius</Box>
-                      <Box component="div" sx={{ display: 'inline' }}>inldatane</Box>
-                      <Box component="div" sx={{ display: 'inline' }}>komentarai</Box>
-                    </Item>
-                  </Grid>
-                </Grid>
-
               </Grid>
               <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
                 <Item sx={{ margin: '0 0 1rem 0' }}>šoninė juosta</Item>
@@ -165,6 +124,10 @@ const HomePage = () => {
                     />
                   </Box>
                 </Modal>
+                <Item sx={{ margin: '0 0 1rem 0' }}>
+                  <Typography variant="h3" textAlign="left">Filtrai</Typography>
+                  <Filters />
+                </Item>
               </Grid>
 
             </Grid>

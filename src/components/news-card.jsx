@@ -18,6 +18,7 @@ const NewsCard = ({
   title,
   description,
   category,
+  categoryId,
   img,
   author,
   date,
@@ -31,7 +32,6 @@ const NewsCard = ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
-
   const NewsPicture = {
     maxWidth: 'calc(100% + 16px)',
     margin: '-8px 0 0 -8px',
@@ -53,23 +53,25 @@ const NewsCard = ({
         </Typography>
 
         <Stack direction="row" spacing={1} paddingBottom={2}>
-          {category === 'Games' ? (
+
+          {categoryId === '3' ? (
             <Chip icon={<VideogameAssetIcon />} label="Games" />
           )
             : ('')}
 
-          {category === 'Movies' ? (
+          {categoryId === '2' ? (
             <Chip icon={<MovieIcon />} label="Movies" />
           )
             : ('')}
 
-          {category === 'TV series' ? (
+          {categoryId === '1' ? (
             <Chip icon={<LiveTvIcon />} label="TV series" />
           )
             : ('')}
         </Stack>
 
         <Typography align="left">
+
           {description}
         </Typography>
 

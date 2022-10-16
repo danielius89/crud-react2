@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 
 const NewsCard = ({
-  title, category, img, description,
+  id, title, category, img, description,
 }) => (
   <Card sx={{
     height: '100%',
@@ -41,7 +41,11 @@ const NewsCard = ({
         mb: 2,
       }}
       >
-        <Typography variant="h5" component="div">{title}</Typography>
+        <Typography variant="h5" component="div">
+          {id}
+          {' '}
+          {title}
+        </Typography>
         <Typography variant="subtitle" component="div">{category}</Typography>
       </Box>
       <Typography

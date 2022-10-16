@@ -1,6 +1,6 @@
 const domain = process.env.REACT_APP_SERVER_ADDRESS;
 const collectionName = 'news';
-const relationsParams = '_expand=category&_expand=materialType&_expand=color';
+const relationsParams = '_expand=category';
 
 const fetchAll = async (paramsString = null) => {
   const urlParamsString = paramsString ? `&${paramsString}` : '';

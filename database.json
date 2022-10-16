@@ -1,80 +1,71 @@
 {
   "news": [
     {
-      "title": "Naujienos pavadinimass",
-      "categoryId": 3,
+      "title": "Naujienos pavadinimas",
+      "categoryId": "3",
       "img": "https://geekified.net/wp-content/uploads/2020/01/Oscars.png",
       "description": "Aprašymas",
       "author": "Danielius",
       "date": "2022-06-04",
-      "id": 2
+      "id": "2"
     },
     {
-      "title": "Pavadinimass",
-      "categoryId": 2,
+      "title": "Pavadinimas as",
+      "categoryId": "2",
       "img": "https://geekified.net/wp-content/uploads/2020/03/Indy5.jpg",
       "description": "aprasymass",
       "author": "autorius",
       "date": "2022-05-05",
-      "id": 3
+      "id": "3"
     },
     {
       "title": "New Superman film in the works",
-      "categoryId": 2,
+      "categoryId": "2",
       "img": "https://geekified.net/wp-content/uploads/2021/03/Superman.jpg",
       "description": "There is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.",
       "author": "Petriukas",
       "date": "2022-08-20",
-      "id": 4
+      "id": "4"
     },
     {
-      "title": "Pavadinimas",
-      "categoryId": 2,
+      "title": "Pavadinimass",
+      "categoryId": "2",
       "img": "https://geekified.net/wp-content/uploads/2020/01/Oscars.png",
       "description": "Turinys",
       "author": "Danielius",
       "date": "2022-10-08",
-      "id": 5
+      "id": "5"
     },
     {
       "title": "sgvdgr",
-      "categoryId": 2,
+      "categoryId": "2",
       "img": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
       "description": "drgdr",
       "author": "grdg",
       "date": "gr",
-      "id": 6
+      "id": "6"
     },
     {
       "title": "nauja naujiena",
-      "categoryId": 3,
+      "categoryId": "3",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
       "description": "sferg",
       "author": "gedrg",
       "date": "gre",
-      "id": 7
-    },
-    {
-      "title": "Serialo pavadinimas",
-      "categoryId": 1,
-      "img": "https://geekified.net/wp-content/uploads/2020/03/Indy5.jpg",
-      "description": "gregtrtg",
-      "author": "rtgrtg",
-      "date": "gtrg",
-      "id": 8
+      "id": "7"
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "title": "TV series"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Movies"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Games"
     }
   ]

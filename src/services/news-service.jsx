@@ -1,5 +1,8 @@
 const serverAddress = 'http://localhost:8004';
-
+const domain = process.env.REACT_APP_SERVER_ADDRESS;
+const collectionName = 'news';
+const relationsParams = '_expand=category&_expand=materialType&_expand=color';
+/*
 const formatNews = ({
   id,
   title,
@@ -19,12 +22,26 @@ const formatNews = ({
   categoryId,
   category: category.title,
 });
-
-const fetchAll = async () => {
-  const response = await fetch(`${serverAddress}/news?_expand=category`);
+*/
+const fetchAll = async (paramsString = null) => {
+  const urlParamsString = paramsString ? `&${paramsString}` : '';
+  const response = await fetch(`${domain}/${collectionName}?${relationsParams}${urlParamsString}`);
   const news = await response.json();
 
-  return news.map(formatNews);
+  return news;
+};
+const fetchById = async (id) => {
+  const response = await fetch(`${domain}/${collectionName}/${id}?${relationsParams}`);
+  const article = await response.json();
+
+  return article;
+};
+
+const fetchByIdArr = async (idArr) => {
+  const idsParamsString = idArr.map((id) => `id=${id}`).join('&');
+  const news = await fetchAll(idsParamsString);
+
+  return news;
 };
 
 const create = async (newProps) => {
@@ -72,6 +89,8 @@ const fetchCategories = async () => {
 
 const NewsService = {
   fetchAll,
+  fetchByIdArr,
+  fetchById,
   create,
   update,
   remove,
