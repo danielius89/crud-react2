@@ -91,6 +91,15 @@ const NewsCard = ({
         >
           {date}
         </Box>
+        <Button
+          size="small"
+          variant="contained"
+          fullWidth
+          sx={{ mt: 1 }}
+          onClick={() => navigate(`/article/${id}`)}
+        >
+          Peržiūrėti
+        </Button>
         <Box
           component="div"
           sx={{
@@ -122,15 +131,6 @@ const NewsCard = ({
           <Grid item xs={4} md={4} lg={4} />
         </Box>
 
-        <Button
-          size="small"
-          variant="contained"
-          fullWidth
-          sx={{ mt: 1 }}
-          onClick={() => navigate(`/article/${id}`)}
-        >
-          Peržiūrėti
-        </Button>
       </Item>
     </Grid>
   );

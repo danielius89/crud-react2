@@ -86,7 +86,6 @@ const HomePage = () => {
             <Grid container spacing={2}>
               <Grid item padding={2} xs={12} md={8} sx={{ bgcolor: '#eee' }}>
 
-                <Item>Turinys</Item>
                 <Grid container spacing={2} paddingTop={2}>
                   { news.map(({
                     id,
@@ -114,7 +113,7 @@ const HomePage = () => {
                 </Grid>
               </Grid>
               <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
-                <Item sx={{ margin: '0 0 1rem 0' }}>šoninė juosta</Item>
+
                 <Header openModal={() => setModalOpen(true)} />
                 <Modal open={modalOpen} onClose={closeModal}>
                   <Box sx={{

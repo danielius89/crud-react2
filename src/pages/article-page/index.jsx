@@ -57,7 +57,7 @@ const ArticlePage = () => {
                   <Img alt="complex" src={article.img} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm container>
+              <Grid item xs={12} lg container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                     <Typography variant="h4" sx={{ mb: 1 }}>{article.title}</Typography>

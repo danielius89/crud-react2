@@ -7,6 +7,8 @@ import {
   Button,
   MenuItem,
 } from '@mui/material';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 import NewsService from '../services/news-service';
 
 const NewsForm = ({
@@ -17,7 +19,7 @@ const NewsForm = ({
   initValues,
 }) => {
   const [categories, setCategories] = React.useState([]);
-  const [label, setLabel] = React.useState(initValues?.label ?? '');
+  const [title, setTitle] = React.useState(initValues?.title ?? '');
   const [category, setCategory] = React.useState(initValues?.categoryId ?? '');
   const [img, setImg] = React.useState(initValues?.img ?? '');
   const [description, setDescription] = React.useState(initValues?.description ?? '');
@@ -28,7 +30,7 @@ const NewsForm = ({
     event.preventDefault();
 
     onSubmit({
-      label,
+      title,
       categoryId: category,
       img,
       description,
@@ -52,8 +54,8 @@ const NewsForm = ({
           label="News label"
           fullWidth
           variant="filled"
-          value={label}
-          onChange={(event) => setLabel(event.target.value)}
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
         />
         <TextField
           label="Category"
