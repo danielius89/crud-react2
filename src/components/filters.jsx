@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Button, Divider } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 import AutoSelectField from './category-filter';
 import CategoryService from '../services/category-service';
@@ -21,12 +20,6 @@ const Filters = () => {
 
     setSearchParams(searchParams);
     setCategory(newCategory);
-  };
-
-  const deleteFilters = () => {
-    searchParams.delete('categoryId');
-
-    setSearchParams(searchParams);
   };
 
   React.useEffect(() => {

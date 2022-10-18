@@ -44,7 +44,7 @@ const HomePage = () => {
     setLoading(true);
     const [fetchedNews] = await Promise.all([
       NewsService.fetchAll(searchParams.toString()),
-      wait(1000),
+      wait(100),
     ]);
     setLoading(false);
     setNews(fetchedNews);
@@ -134,10 +134,10 @@ const HomePage = () => {
                     />
                   </Box>
                 </Modal>
-                <Item sx={{ margin: '0 0 1rem 0' }}>
-                  <Typography variant="h3" textAlign="left">Filtrai</Typography>
+                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Filtrai</Typography>
                   <Filters />
-                </Item>
+                </Paper>
               </Grid>
 
             </Grid>
