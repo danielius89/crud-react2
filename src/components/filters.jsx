@@ -52,24 +52,11 @@ const Filters = () => {
   return (
     <div>
       {initialSetupDone && (
-        <>
-
-          <AutoSelectField
-            options={categories}
-            value={category}
-            onChange={handleCategoryChange}
-          />
-          <Divider sx={{ my: 2 }} />
-
-          <Button
-            variant="contained"
-            color="error"
-            fullWidth
-            onClick={deleteFilters}
-          >
-            Pašalinti filtrus
-          </Button>
-        </>
+        <AutoSelectField
+          options={categories}
+          value={category}
+          onChange={handleCategoryChange}
+        />
       )}
 
     </div>
