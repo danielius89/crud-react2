@@ -9,20 +9,19 @@ import {
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { TitleRounded } from '@mui/icons-material';
 import NewsService from '../services/news-service';
 
 const validationSchema = yup.object({
   title: yup.string()
-    .required('Privalomas naujienos pavadinimas')
-    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+    .required('Privalomas naujienos pavadinimas'),
   /* category: yup.string()
     .required('Privaloma'), */
   img: yup.string()
     .required('Privaloma')
     .url('Neteisingas URL adresas'),
   description: yup.string()
-    .required('Privaloma')
-    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+    .required('Privaloma'),
   author: yup.string()
     .required('Privaloma')
     .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
@@ -36,6 +35,7 @@ const NewsForm = ({
   color,
   onFormSubmit,
   initValues,
+
 }) => {
   const [categories, setCategories] = React.useState([]);
 
@@ -48,12 +48,31 @@ const NewsForm = ({
     date: initValues?.date ?? '',
   };
 
+  const onSubmit = (values) => {
+    console.log('įvestos reikšmės');
+    console.table(values);
+    console.log('Naujienos pavadinimas: ', values.title);
+    onFormSubmit({
+      title: values.title,
+      categoryId: values.category,
+      img: values.img,
+      description: values.description,
+      author: values.author,
+      date: values.date,
+    });
+  };
+
   const {
-    values, errors, touched,
-    handleChange, handleBlur,
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleSubmit,
+    handleBlur,
   } = useFormik({
     initialValues,
     validationSchema,
+    onSubmit,
   });
 
   React.useEffect(() => {
@@ -62,7 +81,7 @@ const NewsForm = ({
       setCategories(fethedCategories);
     })();
   }, []);
-
+  /*
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(errors);
@@ -79,6 +98,7 @@ const NewsForm = ({
       date: values.date,
     });
   };
+  */
 
   return (
     <Paper component="form" sx={{ p: 3 }} onSubmit={handleSubmit}>
@@ -165,6 +185,7 @@ const NewsForm = ({
             variant="contained"
             color={color}
             size="large"
+
           >
             {submitText}
           </Button>

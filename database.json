@@ -10,8 +10,8 @@
       "id": "2"
     },
     {
-      "title": "New Superman film in the works",
-      "categoryId": "3",
+      "title": "New Superman film in the workss",
+      "categoryId": "2",
       "img": "https://geekified.net/wp-content/uploads/2021/03/Superman.jpg",
       "description": "There is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.\n\nThere is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.",
       "author": "Petriukas",
@@ -66,13 +66,22 @@
       "id": "iqDaFKm"
     },
     {
-      "title": "",
+      "title": "Ar veikia4",
       "categoryId": [],
-      "img": "",
-      "description": "",
-      "author": "",
-      "date": "",
-      "id": "v6XM-31"
+      "img": "http://google.lt",
+      "description": "d",
+      "author": "D",
+      "date": "0000-00-00",
+      "id": "6hRUMn8"
+    },
+    {
+      "title": "Ar veikia5",
+      "categoryId": "2",
+      "img": "http://google.lt",
+      "description": "fsff",
+      "author": "D",
+      "date": "0000-00-00",
+      "id": "YpMy50O"
     }
   ],
   "categories": [
