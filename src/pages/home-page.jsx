@@ -125,10 +125,10 @@ const HomePage = () => {
                   }}
                   >
                     <NewsForm
-                      onSubmit={newsBeingEdited ? updateNews : createNews}
+                      onFormSubmit={newsBeingEdited ? updateNews : createNews}
                       formTitle={newsBeingEdited ? 'Edit news' : 'Create a post'}
-                      submitText={newsBeingEdited ? 'Update news' : 'Send'}
-                      color={newsBeingEdited ? 'primary' : 'primary'}
+                      submitText={newsBeingEdited ? 'Update news' : 'Publish news'}
+                      color={newsBeingEdited ? 'primary' : 'secondary'}
                       initValues={newsBeingEdited}
                     />
                   </Box>

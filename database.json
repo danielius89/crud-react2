@@ -1,8 +1,8 @@
 {
   "news": [
     {
-      "title": "Naujienos pavadinimas",
-      "categoryId": "1",
+      "title": "Naujienos pavadinimass",
+      "categoryId": "2",
       "img": "https://geekified.net/wp-content/uploads/2020/01/Oscars.png",
       "description": "Aprašymas",
       "author": "Danielius",
@@ -10,21 +10,12 @@
       "id": "2"
     },
     {
-      "title": "Pavadinimas",
-      "categoryId": "2",
-      "img": "https://geekified.net/wp-content/uploads/2020/03/Indy5.jpg",
-      "description": "aprasymass",
-      "author": "autorius",
-      "date": "2022-05-05",
-      "id": "3"
-    },
-    {
       "title": "New Superman film in the works",
       "categoryId": "3",
       "img": "https://geekified.net/wp-content/uploads/2021/03/Superman.jpg",
       "description": "There is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.\n\nThere is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.",
       "author": "Petriukas",
-      "date": "2022-08-20",
+      "date": "2022-08-21",
       "id": "4",
       "label": ""
     },
@@ -57,13 +48,31 @@
       "id": "7"
     },
     {
-      "label": "",
+      "title": "Veikia",
       "categoryId": "",
+      "img": "http://google.com",
+      "description": "D",
+      "author": "D",
+      "date": "0000-00-00",
+      "id": "PUiEhTW"
+    },
+    {
+      "title": "Veikia2",
+      "categoryId": "2",
+      "img": "http://google.lt",
+      "description": "D",
+      "author": "D",
+      "date": "0000-00-00",
+      "id": "iqDaFKm"
+    },
+    {
+      "title": "",
+      "categoryId": [],
       "img": "",
       "description": "",
       "author": "",
       "date": "",
-      "id": "kMeIDQS"
+      "id": "v6XM-31"
     }
   ],
   "categories": [

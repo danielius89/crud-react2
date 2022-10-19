@@ -1,43 +1,60 @@
 import React from 'react';
 import {
   Paper,
-  Typography,
+  MenuItem,
   TextField,
   Box,
   Button,
-  MenuItem,
+  // MenuItem,
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import NewsService from '../services/news-service';
 
+const validationSchema = yup.object({
+  title: yup.string()
+    .required('Privalomas naujienos pavadinimas')
+    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+  /* category: yup.string()
+    .required('Privaloma'), */
+  img: yup.string()
+    .required('Privaloma')
+    .url('Neteisingas URL adresas'),
+  description: yup.string()
+    .required('Privaloma')
+    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+  author: yup.string()
+    .required('Privaloma')
+    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+  date: yup.string()
+    .required('Privaloma')
+    .matches(/\d{4}-\d{2}-\d{2}/, 'Datos formatas turi būti YYYY-MM-DD'),
+});
+
 const NewsForm = ({
-  onSubmit,
-  formLabel,
   submitText,
   color,
+  onFormSubmit,
   initValues,
 }) => {
   const [categories, setCategories] = React.useState([]);
-  const [title, setTitle] = React.useState(initValues?.title ?? '');
-  const [category, setCategory] = React.useState(initValues?.categoryId ?? '');
-  const [img, setImg] = React.useState(initValues?.img ?? '');
-  const [description, setDescription] = React.useState(initValues?.description ?? '');
-  const [author, setAuthor] = React.useState(initValues?.author ?? '');
-  const [date, setDate] = React.useState(initValues?.date ?? '');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    onSubmit({
-      title,
-      categoryId: category,
-      img,
-      description,
-      author,
-      date,
-    });
+  const initialValues = {
+    title: initValues?.title ?? '',
+    category: initValues?.categoryId ?? [],
+    img: initValues?.img ?? '',
+    description: initValues?.description ?? '',
+    author: initValues?.author ?? '',
+    date: initValues?.date ?? '',
   };
+
+  const {
+    values, errors, touched,
+    handleChange, handleBlur,
+  } = useFormik({
+    initialValues,
+    validationSchema,
+  });
 
   React.useEffect(() => {
     (async () => {
@@ -46,58 +63,101 @@ const NewsForm = ({
     })();
   }, []);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(errors);
+    if (errors === {}) {
+      return;
+    }
+
+    onFormSubmit({
+      title: values.title,
+      categoryId: values.category,
+      img: values.img,
+      description: values.description,
+      author: values.author,
+      date: values.date,
+    });
+  };
+
   return (
     <Paper component="form" sx={{ p: 3 }} onSubmit={handleSubmit}>
-      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>{formLabel}</Typography>
+
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <TextField
+          name="title"
           label="News label"
           fullWidth
           variant="filled"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          value={values.title}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.title && Boolean(errors.title)}
+          helperText={touched.title && errors.title}
         />
+
         <TextField
+          name="category"
           label="Category"
           fullWidth
           select
           variant="filled"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
+          value={values.category}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.category && Boolean(errors.category)}
+          helperText={touched.category && errors.category}
         >
-          {categories.map(({ id, label: categoryLabel }) => (
-            <MenuItem key={id} value={id}>{categoryLabel}</MenuItem>
+          {categories.map(({ id, label: category }) => (
+            <MenuItem key={id} value={id}>{category}</MenuItem>
           ))}
         </TextField>
+
         <TextField
+          name="img"
           label="Image path"
           fullWidth
           variant="filled"
-          value={img}
-          onChange={(event) => setImg(event.target.value)}
+          value={values.img}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.img && Boolean(errors.img)}
+          helperText={touched.img && errors.img}
         />
         <TextField
+          name="description"
           label="Content"
           fullWidth
           variant="filled"
           multiline
           rows={4}
-          value={description}
-          onChange={(event) => setDescription(event.target.value)}
+          value={values.description}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.description && Boolean(errors.description)}
+          helperText={touched.description && errors.description}
         />
         <TextField
+          name="author"
           label="Author"
           fullWidth
           variant="filled"
-          value={author}
-          onChange={(event) => setAuthor(event.target.value)}
+          value={values.author}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.author && Boolean(errors.author)}
+          helperText={touched.author && errors.author}
         />
         <TextField
+          name="date"
           label="Date"
           fullWidth
           variant="filled"
-          value={date}
-          onChange={(event) => setDate(event.target.value)}
+          value={values.date}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={touched.date && Boolean(errors.date)}
+          helperText={touched.date && errors.date}
         />
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Button
@@ -111,7 +171,7 @@ const NewsForm = ({
         </Box>
       </Box>
     </Paper>
+
   );
 };
-
 export default NewsForm;
