@@ -1,8 +1,8 @@
 {
   "news": [
     {
-      "title": "Naujienos pavadinimass",
-      "categoryId": "2",
+      "title": "Naujienos pavadinimas",
+      "categoryId": "1",
       "img": "https://geekified.net/wp-content/uploads/2020/01/Oscars.png",
       "description": "Aprašymas",
       "author": "Danielius",
@@ -11,7 +11,7 @@
     },
     {
       "title": "New Superman film in the workss",
-      "categoryId": "2",
+      "categoryId": "3",
       "img": "https://geekified.net/wp-content/uploads/2021/03/Superman.jpg",
       "description": "There is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.\n\nThere is a new Superman movie in the works. Shadow and Act was the first to break the news, according to which Ta-Nehisi Coates will write the film for DC Films, Warner Bros. Pictures and Bad Robot. Here is his statement, as shared by Shadow and Act.",
       "author": "Petriukas",
@@ -30,58 +30,13 @@
       "label": "fsdgrrd"
     },
     {
-      "title": "sgvdgr",
+      "title": "Normalesnis pavadinimas",
       "categoryId": "2",
       "img": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
       "description": "drgdr",
-      "author": "grdg",
-      "date": "gr",
+      "author": "Danielius",
+      "date": "0000-00-00",
       "id": "6"
-    },
-    {
-      "title": "nauja naujiena",
-      "categoryId": "3",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png",
-      "description": "sferg",
-      "author": "gedrg",
-      "date": "gre",
-      "id": "7"
-    },
-    {
-      "title": "Veikia",
-      "categoryId": "",
-      "img": "http://google.com",
-      "description": "D",
-      "author": "D",
-      "date": "0000-00-00",
-      "id": "PUiEhTW"
-    },
-    {
-      "title": "Veikia2",
-      "categoryId": "2",
-      "img": "http://google.lt",
-      "description": "D",
-      "author": "D",
-      "date": "0000-00-00",
-      "id": "iqDaFKm"
-    },
-    {
-      "title": "Ar veikia4",
-      "categoryId": [],
-      "img": "http://google.lt",
-      "description": "d",
-      "author": "D",
-      "date": "0000-00-00",
-      "id": "6hRUMn8"
-    },
-    {
-      "title": "Ar veikia5",
-      "categoryId": "2",
-      "img": "http://google.lt",
-      "description": "fsff",
-      "author": "D",
-      "date": "0000-00-00",
-      "id": "YpMy50O"
     }
   ],
   "categories": [
