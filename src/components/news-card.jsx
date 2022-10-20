@@ -14,6 +14,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
+import { Divider } from '@mui/material';
 
 const NewsCard = ({
   id,
@@ -56,7 +57,7 @@ const NewsCard = ({
       }}
       >
         <div style={NewsPictureBox}> </div>
-        <Typography variant="h4" component="h2" align="left" color="secondary" fontWeight="700" gutterBottom>
+        <Typography variant="h4" component="h2" align="left" paddingTop={2} color="secondary" fontWeight="700" gutterBottom>
           {title}
         </Typography>
 
@@ -87,24 +88,45 @@ const NewsCard = ({
             WebkitLineClamp: '5',
             lineClamp: '5',
             WebkitBoxOrient: 'vertical',
+
           }}
         >
 
           {description}
         </Typography>
-
-        <Box component="div" sx={{ display: 'inline', marginRight: '15px', fontWeight: '700' }}>{author}</Box>
-
+        <Divider light sx={{ marginBottom: '16px', marginTop: '16px' }} />
         <Box
-          component="div"
           sx={{
-            display: 'inline',
-            marginRight: '15px',
-            fontWeight: '400',
-            fontStyle: 'italic',
+            display: 'flex',
+            alignItems: 'center',
+            color: 'text.secondary',
+            marginBottom: 1,
+            justifyContent: 'space-between',
           }}
         >
-          {date}
+          <Box
+            component="div"
+            sx={{
+              display: 'inline',
+              marginRight: '15px',
+              fontWeight: '700',
+            }}
+          >
+            {author}
+
+          </Box>
+
+          <Box
+            component="div"
+            sx={{
+              display: 'inline',
+              marginRight: '15px',
+              fontWeight: '400',
+              fontStyle: 'italic',
+            }}
+          >
+            {date}
+          </Box>
         </Box>
         <Button
           size="small"
