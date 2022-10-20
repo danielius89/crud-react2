@@ -9,8 +9,11 @@ import Stack from '@mui/material/Stack';
 import MovieIcon from '@mui/icons-material/Movie';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
+import { Divider, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryCard = ({
+  id,
   title,
   description,
   category,
@@ -19,6 +22,7 @@ const CategoryCard = ({
   author,
   date,
 }) => {
+  const navigate = useNavigate();
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -28,29 +32,29 @@ const CategoryCard = ({
   }));
 
   const NewsPictureBox = {
-    paddingBottom: '80%',
-  };
-  const NewsPicture = {
-    maxWidth: 'calc(100% + 16px)',
+    paddingBottom: '70%',
+    backgroundImage: `url(${img})`,
+    width: 'calc(100% + 16px)',
     margin: '-8px 0 0 -8px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 50%',
   };
 
   return (
 
     <Grid item xs={12} md={6} lg={4}>
-      <Item sx={{ textAlign: 'left' }}>
-        <div style={NewsPictureBox}>
-          <img
-            src={img}
-            alt="no alt"
-            style={NewsPicture}
-          />
-        </div>
-        <Typography variant="h4" component="h2" align="left" color="secondary" fontWeight="700" gutterBottom>
+      <Item sx={{
+        textAlign: 'left',
+      }}
+      >
+        <div style={NewsPictureBox}> </div>
+        <Typography variant="h4" component="h2" align="left" paddingTop={2} color="secondary" fontWeight="700" gutterBottom>
           {title}
         </Typography>
 
         <Stack direction="row" spacing={1} paddingBottom={2}>
+
           {categoryId === '3' ? (
             <Chip icon={<VideogameAssetIcon />} label="Games" />
           )
@@ -67,23 +71,65 @@ const CategoryCard = ({
             : ('')}
         </Stack>
 
-        <Typography align="left">
-          {description}
-        </Typography>
-
-        <Box component="div" sx={{ display: 'inline', marginRight: '15px', fontWeight: '700' }}>{author}</Box>
-
-        <Box
-          component="div"
+        <Typography
+          align="left"
           sx={{
-            display: 'inline',
-            marginRight: '15px',
-            fontWeight: '400',
-            fontStyle: 'italic',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: '5',
+            lineClamp: '5',
+            WebkitBoxOrient: 'vertical',
+
           }}
         >
-          {date}
+
+          {description}
+        </Typography>
+        <Divider light sx={{ marginBottom: '16px', marginTop: '16px' }} />
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            color: 'text.secondary',
+            marginBottom: 1,
+            justifyContent: 'space-between',
+          }}
+        >
+          <Box
+            component="div"
+            sx={{
+              display: 'inline',
+              marginRight: '15px',
+              fontWeight: '700',
+            }}
+          >
+            {author}
+
+          </Box>
+
+          <Box
+            component="div"
+            sx={{
+              display: 'inline',
+              marginRight: '15px',
+              fontWeight: '400',
+              fontStyle: 'italic',
+            }}
+          >
+            {date}
+          </Box>
         </Box>
+        <Button
+          size="small"
+          variant="contained"
+          fullWidth
+          sx={{ mt: 1 }}
+          onClick={() => navigate(`/article/${id}`)}
+        >
+          Peržiūrėti
+        </Button>
+
       </Item>
     </Grid>
   );

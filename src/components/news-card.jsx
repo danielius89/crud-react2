@@ -50,10 +50,8 @@ const NewsCard = ({
   return (
 
     <Grid item xs={12} md={6} lg={6}>
-
       <Item sx={{
         textAlign: 'left',
-
       }}
       >
         <div style={NewsPictureBox}> </div>
