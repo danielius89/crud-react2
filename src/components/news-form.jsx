@@ -150,7 +150,7 @@ const NewsForm = ({
           fullWidth
           variant="filled"
           multiline
-          rows={4}
+          rows={8}
           value={values.description}
           onChange={handleChange}
           onBlur={handleBlur}

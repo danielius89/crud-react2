@@ -121,7 +121,9 @@ const HomePage = () => {
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    minWidth: '400px',
+                    width: '100%',
+                    padding: '2%',
+                    maxWidth: '1000px',
                   }}
                   >
                     <NewsForm

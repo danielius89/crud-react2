@@ -44,7 +44,11 @@ const NewsCard = ({
 
     <Grid item xs={12} md={6} lg={6}>
 
-      <Item sx={{ textAlign: 'left' }}>
+      <Item sx={{
+        textAlign: 'left',
+
+      }}
+      >
 
         <img
           src={img}
@@ -73,7 +77,17 @@ const NewsCard = ({
             : ('')}
         </Stack>
 
-        <Typography align="left">
+        <Typography
+          align="left"
+          sx={{
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: '5',
+            lineClamp: '5',
+            WebkitBoxOrient: 'vertical',
+          }}
+        >
 
           {description}
         </Typography>
