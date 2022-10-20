@@ -27,6 +27,9 @@ const CategoryCard = ({
     color: theme.palette.text.secondary,
   }));
 
+  const NewsPictureBox = {
+    paddingBottom: '80%',
+  };
   const NewsPicture = {
     maxWidth: 'calc(100% + 16px)',
     margin: '-8px 0 0 -8px',
@@ -36,11 +39,13 @@ const CategoryCard = ({
 
     <Grid item xs={12} md={6} lg={4}>
       <Item sx={{ textAlign: 'left' }}>
-        <img
-          src={img}
-          alt="no alt"
-          style={NewsPicture}
-        />
+        <div style={NewsPictureBox}>
+          <img
+            src={img}
+            alt="no alt"
+            style={NewsPicture}
+          />
+        </div>
         <Typography variant="h4" component="h2" align="left" color="secondary" fontWeight="700" gutterBottom>
           {title}
         </Typography>

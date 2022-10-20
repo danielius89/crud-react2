@@ -35,9 +35,15 @@ const NewsCard = ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
-  const NewsPicture = {
-    maxWidth: 'calc(100% + 16px)',
+
+  const NewsPictureBox = {
+    paddingBottom: '70%',
+    backgroundImage: `url(${img})`,
+    width: 'calc(100% + 16px)',
     margin: '-8px 0 0 -8px',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 50%',
   };
 
   return (
@@ -49,12 +55,7 @@ const NewsCard = ({
 
       }}
       >
-
-        <img
-          src={img}
-          alt="no alt"
-          style={NewsPicture}
-        />
+        <div style={NewsPictureBox}> </div>
         <Typography variant="h4" component="h2" align="left" color="secondary" fontWeight="700" gutterBottom>
           {title}
         </Typography>
