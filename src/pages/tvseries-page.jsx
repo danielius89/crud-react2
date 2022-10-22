@@ -53,7 +53,7 @@ const TvSeriesCat = () => {
         <HeroSection maxWidth="false" />
       </HeroSectionWrapper>
 
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ padding: 2, bgcolor: '#eee' }}>
         <Grid container spacing={2} paddingTop={2}>
           { news.map(({
             id,
