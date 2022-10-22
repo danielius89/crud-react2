@@ -49,7 +49,7 @@ const CategoryCard = ({
       }}
       >
         <div style={NewsPictureBox}> </div>
-        <Typography variant="h4" component="h2" align="left" paddingTop={2} color="secondary" fontWeight="700" gutterBottom>
+        <Typography variant="h5" component="h2" align="left" paddingTop={2} color="primary" fontWeight="700" gutterBottom>
           {title}
         </Typography>
 
@@ -122,9 +122,10 @@ const CategoryCard = ({
         </Box>
         <Button
           size="small"
-          variant="contained"
+          color="secondary"
+          variant="outlined"
           fullWidth
-          sx={{ mt: 1 }}
+          sx={{ mt: 1, fontWeight: '700' }}
           onClick={() => navigate(`/article/${id}`)}
         >
           Peržiūrėti
