@@ -3,7 +3,7 @@ import * as React from 'react';
 
 const Footer = () => (
   <Container
-    maxWidth="xl"
+    maxWidth="false"
     sx={{
       padding: 3,
       textAlign: 'center',
