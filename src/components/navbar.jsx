@@ -59,9 +59,15 @@ const Navbar = () => {
 
         <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
           {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
-          <Divider />
+          <Divider
+            orientation="vertical"
+            flexItem
+            variant="middle"
+            sx={{ marginLeft: 1, marginRight: 2 }}
+          />
           {user ? (
             <Button
+              variant="ou"
               size="small"
               color="white"
               type="submit"
