@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import * as React from 'react';
 import { useContext } from 'react';
 import { styled } from '@mui/material/styles';
@@ -149,6 +150,15 @@ const HomePage = () => {
                 <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
                   <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Filtrai</Typography>
                   <Filters />
+                </Paper>
+                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Apie mus</Typography>
+                  <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos sequi soluta itaque nostrum veniam, magni similique error aliquam magnam voluptatibus illo repellendus nisi id reiciendis natus voluptatem non suscipit commodi provident esse blanditiis mollitia? Corrupti ratione porro mollitia voluptatibus consequatur, voluptatum quaerat aperiam sapiente ut dolore error molestias blanditiis?</Typography>
+                </Paper>
+                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Partneriai</Typography>
+                  <Typography sx={{ mb: 2 }}>Rinkitės CodeAcademy</Typography>
+                  <img src="/code-academy.jpg" alt="" style={{ maxWidth: '100%' }} />
                 </Paper>
               </Grid>
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
@@ -7,23 +7,31 @@ import Container from '@mui/material/Container';
 import NewsCard from '../components/category-card';
 import NewsService from '../services/news-service';
 
-const theme = createTheme();
-
-theme.typography.h1 = {
-  fontSize: '1.5rem',
-  '@media (min-width:600px)': {
-    fontSize: '2rem',
-  },
-  [theme.breakpoints.up('md')]: {
-    fontSize: '3rem',
-  },
-};
-
 const GamesCat = () => {
   const [news, setNews] = React.useState([]);
 
   // UX functions
+  const HeroSectionWrapper = styled(Container)(() => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    paddingTop: '15vw',
+    paddingBottom: '15vw',
+    position: 'relative',
 
+  }));
+  const HeroSection = styled(Container)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#ddd',
+    backgroundImage: 'url(games2.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: '50%',
+    textAlign: 'center',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: '0',
+    left: '0',
+    zIndex: '-1',
+    // opacity: '.5',
+  }));
   // Data manipulation functions
   const fetchAllNews = async () => {
     const fetchedNews = await NewsService.fetchAll();
@@ -38,9 +46,12 @@ const GamesCat = () => {
     <>
       <CssBaseline />
 
-      <Typography variant="h1" align="center" pt="1vh" component="div" gutterBottom>
-        Žaidimai
-      </Typography>
+      <HeroSectionWrapper maxWidth="false">
+        <Typography variant="h1" component="h1" align="center" pt="1vh" gutterBottom>
+          Žaidimai
+        </Typography>
+        <HeroSection maxWidth="false" />
+      </HeroSectionWrapper>
 
       <Container maxWidth="xl">
         <Grid container spacing={2} paddingTop={2}>

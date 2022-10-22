@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
@@ -8,10 +8,30 @@ import NewsCard from '../components/category-card';
 import NewsService from '../services/news-service';
 
 const MoviesCat = () => {
-  const theme = createTheme();
   const [news, setNews] = React.useState([]);
 
   // UX functions
+  const HeroSectionWrapper = styled(Container)(() => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    paddingTop: '15vw',
+    paddingBottom: '15vw',
+    position: 'relative',
+
+  }));
+  const HeroSection = styled(Container)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#ddd',
+    backgroundImage: 'url(movies.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: '50%',
+    textAlign: 'center',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: '0',
+    left: '0',
+    zIndex: '-1',
+    // opacity: '.5',
+  }));
 
   // Data manipulation functions
   const fetchAllNews = async () => {
@@ -26,10 +46,12 @@ const MoviesCat = () => {
   return (
     <>
       <CssBaseline />
-      <Typography variant="h1" align="center" pt="1vh" component="div" gutterBottom>
-        Filmai
-      </Typography>
-
+      <HeroSectionWrapper maxWidth="false">
+        <Typography variant="h1" component="h1" align="center" pt="1vh" gutterBottom>
+          Filmai
+        </Typography>
+        <HeroSection maxWidth="false" />
+      </HeroSectionWrapper>
       <Container maxWidth="xl">
         <Grid container spacing={2} paddingTop={2}>
           { news.map(({
