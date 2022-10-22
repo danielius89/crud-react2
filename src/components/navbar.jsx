@@ -9,7 +9,6 @@ import {
   Typography,
   Divider,
 } from '@mui/material';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';

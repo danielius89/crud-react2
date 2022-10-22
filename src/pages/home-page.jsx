@@ -30,6 +30,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HomePage = () => {
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = React.useState(false);
   const [searchParams] = useSearchParams();
 
@@ -38,7 +39,7 @@ const HomePage = () => {
   const [newsBeingEdited, setNewsBeingEdited] = React.useState(null);
 
   // react context
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   // UX functions
   const closeModal = () => {
@@ -89,7 +90,7 @@ const HomePage = () => {
       <CssBaseline />
 
       <Container maxWidth="xl" sx={{ paddingTop: 4 }}>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
           <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
             <Grid container spacing={2}>
               <Grid item padding={2} xs={12} md={8} sx={{ bgcolor: '#eee' }}>

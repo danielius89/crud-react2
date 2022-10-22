@@ -13,6 +13,7 @@ import GamesCat from './pages/games-cat';
 import TvSeriesCat from './pages/tvseries-page';
 import ArticlePage from './pages/article-page';
 import { UserContext } from './global/UserContext';
+import Footer from './components/footer';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="article/:articleId" element={<ArticlePage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <Footer />
       </UserContext.Provider>
     </BrowserRouter>
   );
