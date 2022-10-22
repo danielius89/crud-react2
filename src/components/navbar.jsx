@@ -85,11 +85,12 @@ const Navbar = () => {
           />
           {user ? (
             <Button
-              variant="ou"
               size="small"
               color="white"
-              type="submit"
-              sx={{ fontWeight: '700' }}
+              sx={{
+                fontWeight: '700',
+                width: '100px',
+              }}
               onClick={() => {
                 // call logout
                 setUser(null);
@@ -102,7 +103,10 @@ const Navbar = () => {
             <Button
               size="small"
               color="white"
-              sx={{ fontWeight: '700' }}
+              sx={{
+                fontWeight: '700',
+                width: '100px',
+              }}
               onClick={async () => {
                 // eslint-disable-next-line no-shadow
                 const user = await login();
@@ -152,6 +156,7 @@ const Navbar = () => {
                   fontWeight: '700',
                   margin: '0 auto',
                   textAlign: 'center',
+                  width: '100px',
                   display: 'block',
                 }}
                 onClick={() => {
@@ -170,6 +175,7 @@ const Navbar = () => {
                   fontWeight: '700',
                   margin: '0 auto',
                   textAlign: 'center',
+                  width: '100px',
                   display: 'block',
                 }}
                 onClick={async () => {

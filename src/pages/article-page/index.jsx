@@ -25,7 +25,7 @@ const ArticlePage = () => {
         const fetchedArticle = await ArticleService.fetchById(articleId);
         setArticle(fetchedArticle);
       } catch (error) {
-        setErrorMsg(`Nerastas produktas pagal id: '${articleId}'`);
+        setErrorMsg(`Tokia naujiena nerasta. ID numeris: '${articleId}'`);
       }
     })();
   }, [articleId]);
@@ -37,7 +37,7 @@ const ArticlePage = () => {
   });
 
   return (
-    <Box sx={{ mt: 4, mx: 4 }}>
+    <Box sx={{ mt: 4, mx: 4, pb: 4 }}>
       {errorMsg && (<Alert severity="error">{errorMsg}</Alert>)}
       {article && (
       <Box>

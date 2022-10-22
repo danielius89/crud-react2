@@ -13,8 +13,8 @@ const GamesCat = () => {
   // UX functions
   const HeroSectionWrapper = styled(Container)(() => ({
     backgroundColor: 'rgba(255, 255, 255, 0.7)',
-    paddingTop: '15vw',
-    paddingBottom: '15vw',
+    paddingTop: '12vw',
+    paddingBottom: '12vw',
     position: 'relative',
 
   }));
