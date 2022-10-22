@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useContext } from 'react';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -10,12 +11,14 @@ import Typography from '@mui/material/Typography';
 // import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { Box, Modal, Grid } from '@mui/material/';
 import { useSearchParams } from 'react-router-dom';
+import { UserContext } from '../global/UserContext';
 import wait from '../helpers/wait';
 import Header from '../components/header';
 import NewsForm from '../components/news-form';
 import NewsCard from '../components/news-card';
 import NewsService from '../services/news-service';
 import Filters from '../components/filters';
+import { login } from '../services/login';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,6 +35,9 @@ const HomePage = () => {
   const [news, setNews] = React.useState([]);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [newsBeingEdited, setNewsBeingEdited] = React.useState(null);
+
+  // react context
+  const { user, setUser } = useContext(UserContext);
 
   // UX functions
   const closeModal = () => {
@@ -80,6 +86,7 @@ const HomePage = () => {
   return (
     <>
       <CssBaseline />
+
       <Container maxWidth="xl" sx={{ paddingTop: 4 }}>
         <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
           <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
@@ -113,8 +120,12 @@ const HomePage = () => {
                 </Grid>
               </Grid>
               <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
+                {
+                  user
+                    ? (<Header openModal={() => setModalOpen(true)} />)
+                    : ('')
+                }
 
-                <Header openModal={() => setModalOpen(true)} />
                 <Modal open={modalOpen} onClose={closeModal}>
                   <Box sx={{
                     position: 'absolute',

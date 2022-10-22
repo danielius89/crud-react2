@@ -15,6 +15,8 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import { Divider } from '@mui/material';
+import { useContext } from 'react';
+import { UserContext } from '../global/UserContext';
 
 const NewsCard = ({
   id,
@@ -28,6 +30,8 @@ const NewsCard = ({
   onDelete,
   onEdit,
 }) => {
+  // react context
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -135,36 +139,39 @@ const NewsCard = ({
         >
           Peržiūrėti
         </Button>
-        <Box
-          component="div"
-          sx={{
-            gap: 1,
-            p: 2,
-            mt: 2,
-            backgroundColor: '#eee',
-          }}
-        >
-          <Typography component="div" variant="h5" sx={{ marginBottom: 1 }}>News control panel</Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <Button variant="outlined" fullWidth onClick={onEdit}>
-                <strong>Edit</strong>
-                <IconButton>
-                  <EditIcon sx={{ marginRight: 0 }} />
-                </IconButton>
-              </Button>
+        { user ? (
+          <Box
+            component="div"
+            sx={{
+              gap: 1,
+              p: 2,
+              mt: 2,
+              backgroundColor: '#eee',
+            }}
+          >
+            <Typography component="div" variant="h5" sx={{ marginBottom: 1 }}>News control panel</Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                <Button variant="outlined" fullWidth onClick={onEdit}>
+                  <strong>Edit</strong>
+                  <IconButton>
+                    <EditIcon sx={{ marginRight: 0 }} />
+                  </IconButton>
+                </Button>
+              </Grid>
+              <Grid item xs={6}>
+                <Button variant="outlined" fullWidth onClick={onDelete}>
+                  <strong>Delete</strong>
+                  <IconButton>
+                    <ClearIcon />
+                  </IconButton>
+                </Button>
+              </Grid>
             </Grid>
-            <Grid item xs={6}>
-              <Button variant="outlined" fullWidth onClick={onDelete}>
-                <strong>Delete</strong>
-                <IconButton>
-                  <ClearIcon />
-                </IconButton>
-              </Button>
-            </Grid>
-          </Grid>
-          <Grid item xs={4} md={4} lg={4} />
-        </Box>
+            <Grid item xs={4} md={4} lg={4} />
+          </Box>
+
+        ) : ('')}
 
       </Item>
     </Grid>

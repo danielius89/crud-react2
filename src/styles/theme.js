@@ -7,6 +7,7 @@ const lightTheme = createTheme({
     },
     primary: { main: '#006eb8' },
     secondary: { main: '#f36f25' },
+    white: { main: '#fff' },
   },
 });
 

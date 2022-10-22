@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useMemo } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -11,19 +12,28 @@ import HomePage from './pages/home-page';
 import GamesCat from './pages/games-cat';
 import TvSeriesCat from './pages/tvseries-page';
 import ArticlePage from './pages/article-page';
+import { UserContext } from './global/UserContext';
 
-const App = () => (
-  <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/movies" element={<MoviesCat />} />
-      <Route path="/games" element={<GamesCat />} />
-      <Route path="/tv-series" element={<TvSeriesCat />} />
-      <Route path="article/:articleId" element={<ArticlePage />} />
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
-  </BrowserRouter>
-);
+const App = () => {
+  const [user, setUser] = useState(null);
+
+  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+
+  return (
+    <BrowserRouter>
+      <UserContext.Provider value={value}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesCat />} />
+          <Route path="/games" element={<GamesCat />} />
+          <Route path="/tv-series" element={<TvSeriesCat />} />
+          <Route path="article/:articleId" element={<ArticlePage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </UserContext.Provider>
+    </BrowserRouter>
+  );
+};
 
 export default App;

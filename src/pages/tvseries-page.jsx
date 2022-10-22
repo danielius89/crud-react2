@@ -7,9 +7,8 @@ import Container from '@mui/material/Container';
 import NewsCard from '../components/category-card';
 import NewsService from '../services/news-service';
 
-const theme = createTheme();
-
 const TvSeriesCat = () => {
+  const theme = createTheme();
   const [news, setNews] = React.useState([]);
 
   // UX functions

@@ -1,14 +1,20 @@
 import * as React from 'react';
+import { useContext } from 'react';
 import {
   AppBar,
   Box,
   Toolbar,
   IconButton,
   styled,
+  Typography,
+  Divider,
 } from '@mui/material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { UserContext } from '../global/UserContext';
+import { login } from '../services/login';
 
 const Link = styled(NavLink)(({ theme }) => ({
   display: 'flex',
@@ -35,31 +41,65 @@ const pages = [
   { text: 'Serialai', to: '/tv-series' },
 ];
 
-const Navbar = () => (
-  <AppBar position="static">
-    <Toolbar sx={{ justifyContent: 'space-between' }}>
-      <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        sx={{ display: { sm: 'none' } }}
-      >
-        <MenuIcon />
-      </IconButton>
+const Navbar = () => {
+  // react context
+  const { user, setUser } = useContext(UserContext);
 
-      <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
-        {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
-      </Box>
-      <IconButton
-        edge="end"
-        color="inherit"
-        component={Link}
-        to="./cart"
-      >
-        <ShoppingBasketIcon />
-      </IconButton>
-    </Toolbar>
-  </AppBar>
-);
+  return (
+    <AppBar position="static">
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          sx={{ display: { sm: 'none' } }}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
+          {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
+          <Divider />
+          {user ? (
+            <Button
+              size="small"
+              color="white"
+              type="submit"
+              sx={{ fontWeight: '700' }}
+              onClick={() => {
+                // call logout
+                setUser(null);
+              }}
+            >
+              Atsijungti
+            </Button>
+          ) : (
+
+            <Button
+              size="small"
+              color="white"
+              sx={{ fontWeight: '700' }}
+              onClick={async () => {
+              // eslint-disable-next-line no-shadow
+                const user = await login();
+                setUser(user);
+              }}
+            >
+              Prisijungti
+
+            </Button>
+          )}
+
+        </Box>
+        <Typography sx={{ fontWeight: '700' }}>
+          Your daily dose of
+          <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
+          culture
+        </Typography>
+
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Navbar;
