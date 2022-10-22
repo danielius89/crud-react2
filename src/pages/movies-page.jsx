@@ -1,111 +1,90 @@
 import * as React from 'react';
-import { useContext } from 'react';
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  styled,
-  Typography,
-  Divider,
-} from '@mui/material';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import { UserContext } from '../global/UserContext';
-import { login } from '../services/login';
+import { styled } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import NewsCard from '../components/category-card';
+import NewsService from '../services/news-service';
 
-const Link = styled(NavLink)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: theme.spacing(0, 2),
-  textDecoration: 'none',
-  color: theme.palette.grey[200],
+const MoviesCat = () => {
+  const [news, setNews] = React.useState([]);
 
-  '&.active': {
-    boxShadow: `inset 0 -4px 0 ${theme.palette.common.white}`,
-  },
+  // UX functions
+  const HeroSectionWrapper = styled(Container)(() => ({
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    paddingTop: '15vw',
+    paddingBottom: '15vw',
+    position: 'relative',
 
-  ':hover': {
-    backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.common.white,
-  },
-}));
+  }));
+  const HeroSection = styled(Container)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#ddd',
+    backgroundImage: 'url(movies.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: '50%',
+    textAlign: 'center',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: '0',
+    left: '0',
+    zIndex: '-1',
+    // opacity: '.5',
+  }));
 
-const pages = [
-  { text: 'Pagrindinis', to: '/' },
-  { text: 'Filmai', to: '/movies' },
-  { text: 'Žaidimai', to: '/games' },
-  { text: 'Serialai', to: '/tv-series' },
-];
+  // Data manipulation functions
+  const fetchAllNews = async () => {
+    const fetchedNews = await NewsService.fetchAll();
+    setNews(fetchedNews);
+  };
 
-const FooterContent = () => {
-  // react context
-  const { user, setUser } = useContext(UserContext);
+  React.useEffect(() => {
+    fetchAllNews();
+  }, []);
 
   return (
-    <AppBar position="static">
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          sx={{ display: { sm: 'none' } }}
-        >
-          <MenuIcon />
-        </IconButton>
-
-        <Box sx={{ display: 'flex', alignSelf: 'stretch' }}>
-          {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
-          <Divider
-            orientation="vertical"
-            flexItem
-            variant="middle"
-            sx={{ marginLeft: 1, marginRight: 2 }}
-          />
-          {user ? (
-            <Button
-              variant="ou"
-              size="small"
-              color="white"
-              type="submit"
-              sx={{ fontWeight: '700' }}
-              onClick={() => {
-                // call logout
-                setUser(null);
-              }}
-            >
-              Atsijungti
-            </Button>
-          ) : (
-
-            <Button
-              size="small"
-              color="white"
-              sx={{ fontWeight: '700' }}
-              onClick={async () => {
-              // eslint-disable-next-line no-shadow
-                const user = await login();
-                setUser(user);
-              }}
-            >
-              Prisijungti
-
-            </Button>
-          )}
-
-        </Box>
-        <Typography sx={{ fontWeight: '700' }}>
-          Your daily dose of
-          <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
-          culture
+    <>
+      <CssBaseline />
+      <HeroSectionWrapper maxWidth="false">
+        <Typography variant="h1" component="h1" align="center" pt="1vh" gutterBottom>
+          Filmai
         </Typography>
+        <HeroSection maxWidth="false" />
+      </HeroSectionWrapper>
+      <Container maxWidth="xl" sx={{ padding: 2, bgcolor: '#eee' }}>
+        <Grid container spacing={2} paddingTop={2}>
+          { news.map(({
+            id,
+            title,
+            description,
+            categoryId,
+            img,
+            author,
+            date,
+          }) => (
+            // eslint-disable-next-line react/jsx-no-useless-fragment
+            <>
+              {categoryId === '2' ? (
+                <NewsCard
+                  key={id}
+                  id={id}
+                  title={title}
+                  description={description}
+                  categoryId={categoryId}
+                  img={img}
+                  author={author}
+                  date={date}
+                />
+              )
+                : ('')}
+            </>
+          ))}
+        </Grid>
 
-      </Toolbar>
-    </AppBar>
+      </Container>
+    </>
   );
 };
 
-export default FooterContent;
+export default MoviesCat;
