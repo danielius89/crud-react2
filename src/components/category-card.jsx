@@ -16,7 +16,6 @@ const CategoryCard = ({
   id,
   title,
   description,
-  category,
   categoryId,
   img,
   author,

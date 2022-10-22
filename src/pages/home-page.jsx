@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import * as React from 'react';
 import { useContext } from 'react';
-import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
@@ -19,15 +18,6 @@ import NewsForm from '../components/news-form';
 import NewsCard from '../components/news-card';
 import NewsService from '../services/news-service';
 import Filters from '../components/filters';
-import { login } from '../services/login';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
 
 const HomePage = () => {
   // eslint-disable-next-line no-unused-vars

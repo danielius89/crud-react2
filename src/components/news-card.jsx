@@ -22,7 +22,6 @@ const NewsCard = ({
   id,
   title,
   description,
-  category,
   categoryId,
   img,
   author,
@@ -31,7 +30,7 @@ const NewsCard = ({
   onEdit,
 }) => {
   // react context
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
