@@ -13,8 +13,8 @@ const GamesCat = () => {
   // UX functions
   const HeroSectionWrapper = styled(Container)(() => ({
     backgroundColor: 'rgba(243, 111, 37, .7)',
-    paddingTop: '10vw',
-    paddingBottom: '10vw',
+    paddingTop: '10%',
+    paddingBottom: '10%',
     position: 'relative',
 
   }));
@@ -46,7 +46,7 @@ const GamesCat = () => {
     <>
       <CssBaseline />
 
-      <HeroSectionWrapper maxWidth="false">
+      <HeroSectionWrapper maxWidth="xl" sx={{ marginTop: 4, border: '10px solid #333' }}>
         <Typography
           variant="h1"
           component="h1"
@@ -63,7 +63,16 @@ const GamesCat = () => {
         <HeroSection maxWidth="false" />
       </HeroSectionWrapper>
 
-      <Container maxWidth="xl" sx={{ padding: 2, bgcolor: '#eee' }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          marginTop: 4,
+          marginBottom: 4,
+          padding: 2,
+          bgcolor: '#eee',
+          border: '10px solid #333',
+        }}
+      >
         <Grid container spacing={2} paddingTop={2}>
           { news.map(({
             id,

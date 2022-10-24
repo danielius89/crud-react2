@@ -80,82 +80,84 @@ const HomePage = () => {
       <CssBaseline />
 
       <Container maxWidth="xl" sx={{ paddingTop: 4 }}>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
-          <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
-            <Grid container spacing={2}>
-              <Grid item padding={2} xs={12} md={8} sx={{ bgcolor: '#eee' }}>
+        <div style={{ border: '10px solid #333' }}>
+          <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
+            <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
+              <Grid container spacing={2}>
+                <Grid item padding={2} xs={12} md={8} sx={{ bgcolor: '#eee' }}>
 
-                <Grid container spacing={2} paddingTop={2}>
-                  { news.map(({
-                    id,
-                    title,
-                    description,
-                    categoryId,
-                    img,
-                    author,
-                    date,
-                  }) => (
+                  <Grid container spacing={2} paddingTop={2}>
+                    { news.map(({
+                      id,
+                      title,
+                      description,
+                      categoryId,
+                      img,
+                      author,
+                      date,
+                    }) => (
 
-                    <NewsCard
-                      key={id}
-                      id={id}
-                      title={title}
-                      description={description}
-                      categoryId={categoryId}
-                      img={img}
-                      author={author}
-                      date={date}
-                      onDelete={() => removeNews(id)}
-                      onEdit={() => editNews(id)}
-                    />
-                  ))}
+                      <NewsCard
+                        key={id}
+                        id={id}
+                        title={title}
+                        description={description}
+                        categoryId={categoryId}
+                        img={img}
+                        author={author}
+                        date={date}
+                        onDelete={() => removeNews(id)}
+                        onEdit={() => editNews(id)}
+                      />
+                    ))}
+                  </Grid>
                 </Grid>
-              </Grid>
-              <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
-                {
+                <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
+                  {
                   user
                     ? (<Header openModal={() => setModalOpen(true)} />)
                     : ('')
                 }
 
-                <Modal open={modalOpen} onClose={closeModal}>
-                  <Box sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '100%',
-                    padding: '2%',
-                    maxWidth: '1000px',
-                  }}
-                  >
-                    <NewsForm
-                      onFormSubmit={newsBeingEdited ? updateNews : createNews}
-                      formTitle={newsBeingEdited ? 'Edit news' : 'Create a post'}
-                      submitText={newsBeingEdited ? 'Update news' : 'Publish news'}
-                      color={newsBeingEdited ? 'primary' : 'secondary'}
-                      initValues={newsBeingEdited}
-                    />
-                  </Box>
-                </Modal>
-                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
-                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Filtrai</Typography>
-                  <Filters />
-                </Paper>
-                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
-                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Apie mus</Typography>
-                  <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos sequi soluta itaque nostrum veniam, magni similique error aliquam magnam voluptatibus illo repellendus nisi id reiciendis natus voluptatem non suscipit commodi provident esse blanditiis mollitia? Corrupti ratione porro mollitia voluptatibus consequatur, voluptatum quaerat aperiam sapiente ut dolore error molestias blanditiis?</Typography>
-                </Paper>
-                <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
-                  <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Partneriai</Typography>
-                  <Typography sx={{ mb: 2 }}>Rinkitės CodeAcademy</Typography>
-                  <img src="/code-academy.jpg" alt="" style={{ maxWidth: '100%' }} />
-                </Paper>
-              </Grid>
+                  <Modal open={modalOpen} onClose={closeModal}>
+                    <Box sx={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '100%',
+                      padding: '2%',
+                      maxWidth: '1000px',
+                    }}
+                    >
+                      <NewsForm
+                        onFormSubmit={newsBeingEdited ? updateNews : createNews}
+                        formTitle={newsBeingEdited ? 'Edit news' : 'Create a post'}
+                        submitText={newsBeingEdited ? 'Update news' : 'Publish news'}
+                        color={newsBeingEdited ? 'primary' : 'secondary'}
+                        initValues={newsBeingEdited}
+                      />
+                    </Box>
+                  </Modal>
+                  <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                    <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Filtrai</Typography>
+                    <Filters />
+                  </Paper>
+                  <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                    <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Apie mus</Typography>
+                    <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos sequi soluta itaque nostrum veniam, magni similique error aliquam magnam voluptatibus illo repellendus nisi id reiciendis natus voluptatem non suscipit commodi provident esse blanditiis mollitia? Corrupti ratione porro mollitia voluptatibus consequatur, voluptatum quaerat aperiam sapiente ut dolore error molestias blanditiis?</Typography>
+                  </Paper>
+                  <Paper sx={{ mb: 2, p: 2, bgcolor: 'common.white' }}>
+                    <Typography variant="h6" textAlign="left" sx={{ mb: 2 }}>Partneriai</Typography>
+                    <Typography sx={{ mb: 2 }}>Rinkitės CodeAcademy</Typography>
+                    <img src="/code-academy.jpg" alt="" style={{ maxWidth: '100%' }} />
+                  </Paper>
+                </Grid>
 
-            </Grid>
+              </Grid>
+            </Box>
           </Box>
-        </Box>
+        </div>
       </Container>
     </>
   );

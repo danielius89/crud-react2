@@ -30,22 +30,40 @@ const lightTheme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: `
+      styleOverrides: {
+        body: {
+          backgroundImage: 'url(shattered-island.jpg)',
+          backgroundAttachment: 'fixed',
+        },
+        styleOverrides: `
         @font-face {
           font-family: 'Maven Pro, sans-serif';
           font-style: normal;
           font-display: swap;
         }
       `,
+      },
     },
   },
+
   palette: {
     background: {
       default: '#fafafa',
     },
     primary: { main: '#006eb8' },
+    dark: { main: '#222222' },
     secondary: { main: '#f36f25' },
     white: { main: '#fff' },
+  },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        body: {
+          backgroundImage:
+            'url("shattered-island.gif")',
+        },
+      },
+    },
   },
 });
 

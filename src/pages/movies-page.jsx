@@ -13,8 +13,8 @@ const MoviesCat = () => {
   // UX functions
   const HeroSectionWrapper = styled(Container)(() => ({
     backgroundColor: 'rgba(243, 111, 37, .7)',
-    paddingTop: '10vw',
-    paddingBottom: '10vw',
+    paddingTop: '10%',
+    paddingBottom: '10%',
     position: 'relative',
 
   }));
@@ -46,23 +46,35 @@ const MoviesCat = () => {
   return (
     <>
       <CssBaseline />
-      <HeroSectionWrapper maxWidth="false">
-        <Typography
-          variant="h1"
-          component="h1"
-          align="center"
-          pt="1vh"
-          sx={{
-            color: '#FFF',
-            textShadow: '0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)',
-          }}
-          gutterBottom
-        >
-          Filmai
-        </Typography>
+      <HeroSectionWrapper maxWidth="xl" sx={{ marginTop: 4, border: '10px solid #333' }}>
+        <div>
+          <Typography
+            variant="h1"
+            component="h1"
+            align="center"
+            pt="1vh"
+            sx={{
+              color: '#FFF',
+              textShadow: '0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)',
+            }}
+            gutterBottom
+          >
+            Filmai
+          </Typography>
+        </div>
         <HeroSection maxWidth="false" />
       </HeroSectionWrapper>
-      <Container maxWidth="xl" sx={{ padding: 2, bgcolor: '#eee' }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          marginTop: 4,
+          marginBottom: 4,
+          padding: 2,
+          bgcolor: '#eee',
+          border: '10px solid #333',
+        }}
+      >
+
         <Grid container spacing={2} paddingTop={2}>
           { news.map(({
             id,

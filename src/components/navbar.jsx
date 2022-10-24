@@ -59,7 +59,7 @@ const Navbar = () => {
   }, [isContracted]);
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="dark">
       <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
         <IconButton
           size="large"
@@ -186,7 +186,7 @@ const Navbar = () => {
           </Box>
         )
           : ('')}
-        <Typography sx={{ fontWeight: '700' }}>
+        <Typography sx={{ fontWeight: '700', color: '#FFF' }}>
           Your daily dose of
           <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
           culture
