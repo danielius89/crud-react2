@@ -12,7 +12,7 @@ const MoviesCat = () => {
 
   // UX functions
   const HeroSectionWrapper = styled(Container)(() => ({
-    backgroundColor: 'rgba(243, 111, 37, .7)',
+    backgroundColor: 'rgba(243, 111, 37, .5)',
     paddingTop: '10%',
     paddingBottom: '10%',
     position: 'relative',
@@ -46,7 +46,14 @@ const MoviesCat = () => {
   return (
     <>
       <CssBaseline />
-      <HeroSectionWrapper maxWidth="xl" sx={{ marginTop: 4, border: '10px solid #333' }}>
+      <HeroSectionWrapper
+        maxWidth="xl"
+        sx={{
+          marginTop: 4,
+          border: '10px solid #333',
+          boxShadow: 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px',
+        }}
+      >
         <div>
           <Typography
             variant="h1"
@@ -72,6 +79,7 @@ const MoviesCat = () => {
           padding: 2,
           bgcolor: '#eee',
           border: '10px solid #333',
+          boxShadow: 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px',
         }}
       >
 

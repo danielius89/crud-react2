@@ -80,7 +80,11 @@ const HomePage = () => {
       <CssBaseline />
 
       <Container maxWidth="xl" sx={{ paddingTop: 4, paddingBottom: 4 }}>
-        <div style={{ border: '10px solid #333' }}>
+        <div style={{
+          border: '10px solid #333',
+          boxShadow: 'rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px',
+        }}
+        >
           <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
             <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
               <Grid container spacing={2}>
@@ -112,7 +116,7 @@ const HomePage = () => {
                     ))}
                   </Grid>
                 </Grid>
-                <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#ddd' }}>
+                <Grid item padding={2} xs={12} md={4} sx={{ bgcolor: '#efefef' }}>
                   {
                   user
                     ? (<Header openModal={() => setModalOpen(true)} />)

@@ -64,7 +64,7 @@ const Navbar = () => {
         <IconButton
           size="large"
           edge="start"
-          color="inherit"
+          color="white"
           sx={{ display: { [expandBr]: 'none' }, alignSelf: 'center' }}
           onClick={() => setOpen(!open)}
         >
@@ -134,6 +134,7 @@ const Navbar = () => {
                 sx={{
                   padding: 1,
                 }}
+                onClick={() => setOpen(!open)}
               >
                 {text}
               </Link>
