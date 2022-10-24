@@ -13,7 +13,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
-
+import Container from '@mui/material/Container';
 import CloseIcon from '@mui/icons-material/Close';
 import { UserContext } from '../global/UserContext';
 import { login } from '../services/login';
@@ -28,6 +28,7 @@ const Link = styled(NavLink)(({ theme }) => ({
 
   '&.active': {
     boxShadow: `inset 0 -4px 0 ${theme.palette.common.white}`,
+    backgroundColor: theme.palette.primary.dark,
   },
 
   ':hover': {
@@ -60,85 +61,20 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" color="dark">
-      <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
-        <IconButton
-          size="large"
-          edge="start"
-          color="white"
-          sx={{ display: { [expandBr]: 'none' }, alignSelf: 'center' }}
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <CloseIcon /> : <MenuIcon />}
-        </IconButton>
-
-        <Box sx={{ display: { xs: 'none', [expandBr]: 'flex' }, alignSelf: 'stretch' }}>
-          {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
-          <Divider
-            orientation="vertical"
-            flexItem
-            variant="middle"
-            sx={{ marginLeft: 1, marginRight: 2 }}
-          />
-          {user ? (
-            <Button
-              size="small"
-              color="white"
-              sx={{
-                fontWeight: '700',
-                width: '100px',
-              }}
-              onClick={() => {
-                // call logout
-                setUser(null);
-              }}
-            >
-              Atsijungti
-            </Button>
-          ) : (
-
-            <Button
-              size="small"
-              color="white"
-              sx={{
-                fontWeight: '700',
-                width: '100px',
-              }}
-              onClick={async () => {
-                // eslint-disable-next-line no-shadow
-                const user = await login();
-                setUser(user);
-              }}
-            >
-              Prisijungti
-            </Button>
-          )}
-        </Box>
-        {open ? (
-          <Box sx={{
-            display: { [expandBr]: 'none' },
-            alignSelf: 'stretch',
-            position: 'absolute',
-            top: '56px',
-            left: '0',
-            width: '100%',
-            height: '100vh',
-            bgcolor: '#333',
-            color: '#ddd',
-            zIndex: '9',
-          }}
+      <Container maxWidth="xl">
+        <Toolbar sx={{ justifyContent: 'space-between', position: 'relative' }}>
+          <IconButton
+            size="large"
+            edge="start"
+            color="white"
+            sx={{ display: { [expandBr]: 'none' }, alignSelf: 'center' }}
+            onClick={() => setOpen(!open)}
           >
-            {pages.map(({ text, to }) => (
-              <Link
-                key={to}
-                to={to}
-                sx={{
-                  padding: 1,
-                }}
-                onClick={() => setOpen(!open)}
-              >
-                {text}
-              </Link>
-            ))}
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+
+          <Box sx={{ display: { xs: 'none', [expandBr]: 'flex' }, alignSelf: 'stretch' }}>
+            {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
             <Divider
               orientation="vertical"
               flexItem
@@ -151,13 +87,10 @@ const Navbar = () => {
                 color="white"
                 sx={{
                   fontWeight: '700',
-                  margin: '0 auto',
-                  textAlign: 'center',
                   width: '100px',
-                  display: 'block',
                 }}
                 onClick={() => {
-                // call logout
+                  // call logout
                   setUser(null);
                 }}
               >
@@ -170,13 +103,10 @@ const Navbar = () => {
                 color="white"
                 sx={{
                   fontWeight: '700',
-                  margin: '0 auto',
-                  textAlign: 'center',
                   width: '100px',
-                  display: 'block',
                 }}
                 onClick={async () => {
-                // eslint-disable-next-line no-shadow
+                  // eslint-disable-next-line no-shadow
                   const user = await login();
                   setUser(user);
                 }}
@@ -185,15 +115,87 @@ const Navbar = () => {
               </Button>
             )}
           </Box>
-        )
-          : ('')}
-        <Typography sx={{ fontWeight: '700', color: '#FFF' }}>
-          Your daily dose of
-          <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
-          culture
-        </Typography>
+          {open ? (
+            <Box sx={{
+              display: { [expandBr]: 'none' },
+              alignSelf: 'stretch',
+              position: 'absolute',
+              top: '56px',
+              left: '0',
+              width: '100%',
+              height: '100vh',
+              bgcolor: '#333',
+              color: '#ddd',
+              zIndex: '9',
+            }}
+            >
+              {pages.map(({ text, to }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  sx={{
+                    padding: 1,
+                  }}
+                  onClick={() => setOpen(!open)}
+                >
+                  {text}
+                </Link>
+              ))}
+              <Divider
+                orientation="vertical"
+                flexItem
+                variant="middle"
+                sx={{ marginLeft: 1, marginRight: 2, borderColor: '#fff' }}
+              />
+              {user ? (
+                <Button
+                  size="small"
+                  color="white"
+                  sx={{
+                    fontWeight: '700',
+                    margin: '0 auto',
+                    textAlign: 'center',
+                    width: '100px',
+                    display: 'block',
+                  }}
+                  onClick={() => {
+                    // call logout
+                    setUser(null);
+                  }}
+                >
+                  Atsijungti
+                </Button>
+              ) : (
 
-      </Toolbar>
+                <Button
+                  size="small"
+                  color="white"
+                  sx={{
+                    fontWeight: '700',
+                    margin: '0 auto',
+                    textAlign: 'center',
+                    width: '100px',
+                    display: 'block',
+                  }}
+                  onClick={async () => {
+                    // eslint-disable-next-line no-shadow
+                    const user = await login();
+                    setUser(user);
+                  }}
+                >
+                  Prisijungti
+                </Button>
+              )}
+            </Box>
+          )
+            : ('')}
+          <Typography sx={{ fontWeight: '700', color: '#FFF' }}>
+            Your daily dose of
+            <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
+            culture
+          </Typography>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
