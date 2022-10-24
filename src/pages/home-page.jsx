@@ -79,7 +79,7 @@ const HomePage = () => {
     <>
       <CssBaseline />
 
-      <Container maxWidth="xl" sx={{ paddingTop: 4 }}>
+      <Container maxWidth="xl" sx={{ paddingTop: 4, paddingBottom: 4 }}>
         <div style={{ border: '10px solid #333' }}>
           <Box sx={{ bgcolor: '#cfe8fc', height: '100%' }}>
             <Box sx={{ flexGrow: 1, paddingLeft: 2, paddingTop: 2 }}>
