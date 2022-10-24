@@ -12,9 +12,9 @@ const TvSeriesCat = () => {
 
   // UX functions
   const HeroSectionWrapper = styled(Container)(() => ({
-    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    paddingTop: '12vw',
-    paddingBottom: '12vw',
+    backgroundColor: 'rgba(243, 111, 37, .7)',
+    paddingTop: '10vw',
+    paddingBottom: '10vw',
     position: 'relative',
 
   }));
@@ -47,7 +47,17 @@ const TvSeriesCat = () => {
     <>
       <CssBaseline />
       <HeroSectionWrapper maxWidth="false">
-        <Typography variant="h1" component="h1" align="center" pt="1vh" gutterBottom>
+        <Typography
+          variant="h1"
+          component="h1"
+          align="center"
+          pt="1vh"
+          sx={{
+            color: '#FFF',
+            textShadow: '0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1)',
+          }}
+          gutterBottom
+        >
           TV serialai
         </Typography>
         <HeroSection maxWidth="false" />

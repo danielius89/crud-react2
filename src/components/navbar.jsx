@@ -4,7 +4,6 @@ import {
   AppBar,
   Box,
   Toolbar,
-  Drawer,
   IconButton,
   styled,
   Typography,
@@ -12,12 +11,9 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import AdbIcon from '@mui/icons-material/Adb';
-import Menu from '@mui/material/Menu';
-import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
+
 import CloseIcon from '@mui/icons-material/Close';
 import { UserContext } from '../global/UserContext';
 import { login } from '../services/login';
