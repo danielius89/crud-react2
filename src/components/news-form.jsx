@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { TitleRounded } from '@mui/icons-material';
+
 import NewsService from '../services/news-service';
 
 const validationSchema = yup.object({
@@ -49,9 +49,6 @@ const NewsForm = ({
   };
 
   const onSubmit = (values) => {
-    console.log('įvestos reikšmės');
-    console.table(values);
-    console.log('Naujienos pavadinimas: ', values.title);
     onFormSubmit({
       title: values.title,
       categoryId: values.category,
