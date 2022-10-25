@@ -12,7 +12,7 @@ import MovieIcon from '@mui/icons-material/Movie';
 import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import Stack from '@mui/material/Stack';
-import ArticleService from '../../services/news-service';
+import ArticleService from '../services/news-service';
 
 const ArticlePage = () => {
   const { articleId } = useParams();
