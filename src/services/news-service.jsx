@@ -34,7 +34,7 @@ const fetchAll = async (paramsString = null) => {
 const fetchById = async (id) => {
   const response = await fetch(`${domain}/${collectionName}/${id}?${relationsParams}`);
   if (response.status === 404) {
-    throw new Error(`Cup with id '${id}' not found.`);
+    throw new Error(`News with this id '${id}' was not found.`);
   }
   const article = await response.json();
 
