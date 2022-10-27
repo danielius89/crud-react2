@@ -15,8 +15,8 @@ import NewsService from '../services/news-service';
 const validationSchema = yup.object({
   title: yup.string()
     .required('Privalomas naujienos pavadinimas'),
-  /* category: yup.string()
-    .required('Privaloma'), */
+  category: yup.string()
+    .required('Privaloma'),
   img: yup.string()
     .required('Privaloma')
     .url('Neteisingas URL adresas'),
@@ -78,24 +78,6 @@ const NewsForm = ({
       setCategories(fethedCategories);
     })();
   }, []);
-  /*
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(errors);
-    if (errors === {}) {
-      return;
-    }
-
-    onFormSubmit({
-      title: values.title,
-      categoryId: values.category,
-      img: values.img,
-      description: values.description,
-      author: values.author,
-      date: values.date,
-    });
-  };
-  */
 
   return (
     <Paper component="form" sx={{ p: 3 }} onSubmit={handleSubmit}>
