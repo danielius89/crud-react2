@@ -194,7 +194,7 @@ const Navbar = () => {
           }}
           >
             Your daily dose of
-            <Typography component="span" color="primary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
+            <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
             culture
           </Typography>
         </Toolbar>
