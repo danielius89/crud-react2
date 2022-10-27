@@ -1,0 +1,162 @@
+{
+  "news": [
+    {
+      "title": "Half-Life 3",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/half-life-2.jpg",
+      "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "bYYZPXv"
+    },
+    {
+      "title": "Hitman 2",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/hitman.jpg",
+      "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "rege"
+    },
+    {
+      "title": "Hollow Knight",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/hollow-knight.jpg",
+      "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "eftgewrg"
+    },
+    {
+      "title": "Ori and The Blind Forest",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/ori.jpg",
+      "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "qeqw"
+    },
+    {
+      "title": "Portal 2 with RTX on",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/portal.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "drgerdg"
+    },
+    {
+      "title": "Resident Evil Village",
+      "categoryId": "3",
+      "img": "http://geekified.net/foto/g/re-village.jpg",
+      "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "bYYZPXsx"
+    },
+    {
+      "title": "Black Mirror",
+      "categoryId": "1",
+      "img": "http://geekified.net/foto/tv/black-mirror.jpg",
+      "description": "Donec nec placerat ante, ac egestas elit. Curabitur eget sollicitudin tortor. Vestibulum ornare dolor ut tellus feugiat, vitae consectetur dui tristique. Sed eu enim scelerisque augue hendrerit accumsan a vel tellus. Quisque ac leo at dui sagittis tempor venenatis at dui. Vivamus non eros ut nisi sagittis sagittis. Nullam eleifend convallis nisi nec pellentesque. Suspendisse potenti. Fusce facilisis cursus aliquam. Quisque vel nisl a nibh vehicula sodales dictum eget turpis. Nulla id est sed enim elementum pretium. In eros urna, tincidunt a ex eget, ullamcorper convallis massa. Phasellus in auctor sem. Sed sit amet ex sapien. Aliquam erat volutpat. Maecenas ipsum libero, elementum luctus nisl egestas, congue rhoncus nibh. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "rgrtrtg"
+    },
+    {
+      "title": "The IT Crowd",
+      "categoryId": "1",
+      "img": "http://geekified.net/foto/tv/it.jpg",
+      "description": "Donec nec placerat ante, ac egestas elit. Curabitur eget sollicitudin tortor. Vestibulum ornare dolor ut tellus feugiat, vitae consectetur dui tristique. Sed eu enim scelerisque augue hendrerit accumsan a vel tellus. Quisque ac leo at dui sagittis tempor venenatis at dui. Vivamus non eros ut nisi sagittis sagittis. Nullam eleifend convallis nisi nec pellentesque. Suspendisse potenti. Fusce facilisis cursus aliquam. Quisque vel nisl a nibh vehicula sodales dictum eget turpis. Nulla id est sed enim elementum pretium. In eros urna, tincidunt a ex eget, ullamcorper convallis massa. Phasellus in auctor sem. Sed sit amet ex sapien. Aliquam erat volutpat. Maecenas ipsum libero, elementum luctus nisl egestas, congue rhoncus nibh. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "zsfdas"
+    },
+    {
+      "title": "Lost",
+      "categoryId": "1",
+      "img": "http://geekified.net/foto/tv/lost.jpg",
+      "description": "Donec nec placerat ante, ac egestas elit. Curabitur eget sollicitudin tortor. Vestibulum ornare dolor ut tellus feugiat, vitae consectetur dui tristique. Sed eu enim scelerisque augue hendrerit accumsan a vel tellus. Quisque ac leo at dui sagittis tempor venenatis at dui. Vivamus non eros ut nisi sagittis sagittis. Nullam eleifend convallis nisi nec pellentesque. Suspendisse potenti. Fusce facilisis cursus aliquam. Quisque vel nisl a nibh vehicula sodales dictum eget turpis. Nulla id est sed enim elementum pretium. In eros urna, tincidunt a ex eget, ullamcorper convallis massa. Phasellus in auctor sem. Sed sit amet ex sapien. Aliquam erat volutpat. Maecenas ipsum libero, elementum luctus nisl egestas, congue rhoncus nibh. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "sdergerdg"
+    },
+    {
+      "title": "Stranger Things",
+      "categoryId": "1",
+      "img": "http://geekified.net/foto/tv/Stranger-Things-Season-4.webp",
+      "description": "Donec nec placerat ante, ac egestas elit. Curabitur eget sollicitudin tortor. Vestibulum ornare dolor ut tellus feugiat, vitae consectetur dui tristique. Sed eu enim scelerisque augue hendrerit accumsan a vel tellus. Quisque ac leo at dui sagittis tempor venenatis at dui. Vivamus non eros ut nisi sagittis sagittis. Nullam eleifend convallis nisi nec pellentesque. Suspendisse potenti. Fusce facilisis cursus aliquam. Quisque vel nisl a nibh vehicula sodales dictum eget turpis. Nulla id est sed enim elementum pretium. In eros urna, tincidunt a ex eget, ullamcorper convallis massa. Phasellus in auctor sem. Sed sit amet ex sapien. Aliquam erat volutpat. Maecenas ipsum libero, elementum luctus nisl egestas, congue rhoncus nibh. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "gfwseged"
+    },
+    {
+      "title": "Vesper - a Lithuanian sci-fi movie",
+      "categoryId": "2",
+      "img": "http://geekified.net/foto/m/vesper.JPG",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet.",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "ozjZTuG"
+    },
+    {
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "categoryId": "2",
+      "img": "http://geekified.net/foto/m/eternal.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet.",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "ada"
+    },
+    {
+      "title": "Truman Show",
+      "categoryId": "2",
+      "img": "http://geekified.net/foto/m/truman.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet.",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "kim"
+    },
+    {
+      "title": "Soul",
+      "categoryId": "2",
+      "img": "http://geekified.net/foto/m/soul.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet.",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "drtgbrft"
+    },
+    {
+      "title": "Glass",
+      "categoryId": "2",
+      "img": "http://geekified.net/foto/m/glass.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor id feugiat maximus, lacus tortor faucibus ligula, vel maximus nulla nulla at ex. Nunc sodales eu lorem eu pharetra. Cras fermentum lobortis justo nec placerat. Morbi pulvinar purus non diam gravida, sit amet imperdiet odio laoreet. Praesent vehicula urna ut mauris ullamcorper vulputate. Fusce in risus hendrerit, maximus turpis a, feugiat tellus. Cras quam ex, convallis eget viverra dapibus, lacinia nec nibh.\n\nCurabitur venenatis sem eros, ut vulputate libero posuere ac. Sed aliquet sit amet mauris quis commodo. Donec ornare arcu massa, sed interdum nisl gravida et. Vivamus vestibulum risus at felis rhoncus condimentum. Quisque consectetur rutrum lacinia. Nulla magna arcu, consectetur ac lacus consequat, porttitor accumsan massa. Maecenas posuere, enim et ullamcorper hendrerit, tortor tortor consectetur quam, et vestibulum neque massa euismod massa. Nam eu orci suscipit, fermentum purus id, interdum ante. Curabitur mollis in libero non cursus. Etiam congue, nulla vitae porttitor facilisis, ante orci commodo nunc, et viverra quam justo non ex. Donec facilisis odio sagittis dolor iaculis interdum. Nunc finibus tortor eu quam luctus imperdiet.",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "gdrg"
+    },
+    {
+      "title": "Black Mirror",
+      "categoryId": "1",
+      "img": "http://geekified.net/foto/tv/black-mirror.jpg",
+      "description": "Donec nec placerat ante, ac egestas elit. Curabitur eget sollicitudin tortor. Vestibulum ornare dolor ut tellus feugiat, vitae consectetur dui tristique. Sed eu enim scelerisque augue hendrerit accumsan a vel tellus. Quisque ac leo at dui sagittis tempor venenatis at dui. Vivamus non eros ut nisi sagittis sagittis. Nullam eleifend convallis nisi nec pellentesque. Suspendisse potenti. Fusce facilisis cursus aliquam. Quisque vel nisl a nibh vehicula sodales dictum eget turpis. Nulla id est sed enim elementum pretium. In eros urna, tincidunt a ex eget, ullamcorper convallis massa. Phasellus in auctor sem. Sed sit amet ex sapien. Aliquam erat volutpat. Maecenas ipsum libero, elementum luctus nisl egestas, congue rhoncus nibh. ",
+      "author": "Danielius",
+      "date": "2022-10-20",
+      "id": "ChGsDda"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "label": "TV series"
+    },
+    {
+      "id": "2",
+      "label": "Movies"
+    },
+    {
+      "id": "3",
+      "label": "Games"
+    }
+  ]
+}

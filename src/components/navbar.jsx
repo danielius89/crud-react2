@@ -72,7 +72,7 @@ const Navbar = () => {
           >
             {open ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
-
+          <Typography component="span" variant="h5" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}>GEEKIFIED </Typography>
           <Box sx={{ display: { xs: 'none', [expandBr]: 'flex' }, alignSelf: 'stretch' }}>
             {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
             <Divider
@@ -189,9 +189,12 @@ const Navbar = () => {
             </Box>
           )
             : ('')}
-          <Typography sx={{ fontWeight: '700', color: '#FFF' }}>
+          <Typography sx={{
+            fontWeight: '700', color: '#FFF', paddingLeft: 2, textAlign: 'right',
+          }}
+          >
             Your daily dose of
-            <Typography component="span" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
+            <Typography component="span" color="primary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}> popular </Typography>
             culture
           </Typography>
         </Toolbar>
