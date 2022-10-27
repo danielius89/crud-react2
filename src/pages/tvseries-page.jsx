@@ -55,7 +55,7 @@ const TvSeriesCat = () => {
         }}
       >
         <Typography
-          variant="h1"
+          variant="h2"
           component="h1"
           align="center"
           pt="1vh"
@@ -65,7 +65,7 @@ const TvSeriesCat = () => {
           }}
           gutterBottom
         >
-          TV serialai
+          Serialai
         </Typography>
         <HeroSection maxWidth="false" />
       </HeroSectionWrapper>

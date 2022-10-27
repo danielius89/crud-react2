@@ -56,7 +56,7 @@ const MoviesCat = () => {
       >
         <div>
           <Typography
-            variant="h1"
+            variant="h2"
             component="h1"
             align="center"
             pt="1vh"
