@@ -72,7 +72,11 @@ const Navbar = () => {
           >
             {open ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
-          <Typography component="span" variant="h5" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}>GEEKIFIED </Typography>
+          <div>
+            <Typography component="span" variant="h5" color="secondary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}>GEEK</Typography>
+            <Typography component="span" variant="h5" color="primary" sx={{ fontWeight: '700', textTransform: 'uppercase' }}>IFIED </Typography>
+          </div>
+
           <Box sx={{ display: { xs: 'none', [expandBr]: 'flex' }, alignSelf: 'stretch' }}>
             {pages.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
             <Divider
