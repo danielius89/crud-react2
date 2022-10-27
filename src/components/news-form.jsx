@@ -16,17 +16,17 @@ const validationSchema = yup.object({
   title: yup.string()
     .required('Privalomas naujienos pavadinimas'),
   category: yup.string()
-    .required('Privaloma'),
+    .required('Pasirinkite kategoriją'),
   img: yup.string()
-    .required('Privaloma')
-    .url('Neteisingas URL adresas'),
+    .required('Įkelkite nuotraukos nuorodą')
+    .url('Neteisingas URL formatas'),
   description: yup.string()
-    .required('Privaloma'),
+    .required('Įkelkite naujienos aprašymą'),
   author: yup.string()
-    .required('Privaloma')
-    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Pirma raidė turi būti didžioji'),
+    .required('Įrašykite autoriaus vardą')
+    .matches(/^[A-Z]+[a-zA-Z]*$/, 'Turi būti tik vardas iš didžiosios raidės'),
   date: yup.string()
-    .required('Privaloma')
+    .required('Įveskite datą')
     .matches(/\d{4}-\d{2}-\d{2}/, 'Datos formatas turi būti YYYY-MM-DD'),
 });
 
@@ -41,7 +41,7 @@ const NewsForm = ({
 
   const initialValues = {
     title: initValues?.title ?? '',
-    category: initValues?.categoryId ?? [],
+    category: initValues?.categoryId ?? '',
     img: initValues?.img ?? '',
     description: initValues?.description ?? '',
     author: initValues?.author ?? '',
